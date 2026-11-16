@@ -1,0 +1,305 @@
+{
+  "pipelines": {
+    "pruning": {
+      "observed_failures": [
+        "The serialized executable model misses the tenfold size target."
+      ],
+      "mitigations_to_test": [
+        "Use a smaller student and a verified INT8 export; distinguish packed storage from execution memory."
+      ],
+      "metrics": {
+        "model_name": "interaction_pruning",
+        "model_size_mb": 91.31426811218262,
+        "artifact_path": "compressed_models/interaction_pruning.keras",
+        "weight_size_mb": 90.76161193847656,
+        "single_inference_ms": 4.456969036255032,
+        "single_p95_ms": 4.506066895555705,
+        "batch_inference_ms": 7.414688530843705,
+        "batch_size": 64,
+        "throughput_images_per_second": 8631.515637342294,
+        "peak_memory_mb": 15598.35546875,
+        "incremental_memory_mb": 50.375,
+        "flops": 1416871936,
+        "flops_reduction": 0.0,
+        "compression_ratio": 1.0,
+        "accuracy_loss_percent": 4.380000000000006,
+        "energy_consumption": null,
+        "energy_method": "unavailable: no power measurement",
+        "ece": 0.12801822306215763,
+        "negative_log_likelihood": 1.0564647912979126,
+        "brier_score": 0.3493671963158855,
+        "execution_backend": "TensorFlow default device/threads",
+        "flops_method": "Conv/Dense estimate; multiply-add=2; excludes preprocessing/BN/activation",
+        "memory_method": "sampled process RSS; includes runtime and retained models",
+        "compression_target_met": false,
+        "validation_accuracy": 0.7744,
+        "evaluation_split": "validation"
+      }
+    },
+    "quantization": {
+      "observed_failures": [
+        "The serialized executable model misses the tenfold size target.",
+        "No measured single-sample latency improvement."
+      ],
+      "mitigations_to_test": [
+        "Use a smaller student and a verified INT8 export; distinguish packed storage from execution memory.",
+        "Prefer physical channel removal and target-supported integer kernels over masked dense kernels."
+      ],
+      "metrics": {
+        "model_name": "interaction_quantization",
+        "model_size_mb": 91.32115364074707,
+        "artifact_path": "compressed_models/interaction_quantization.keras",
+        "weight_size_mb": 90.76161193847656,
+        "single_inference_ms": 11.161307047586888,
+        "single_p95_ms": 11.239422875223681,
+        "batch_inference_ms": 11.93047093693167,
+        "batch_size": 64,
+        "throughput_images_per_second": 5364.415230406638,
+        "peak_memory_mb": 16407.07421875,
+        "incremental_memory_mb": 6.84375,
+        "flops": 1416871936,
+        "flops_reduction": 0.0,
+        "compression_ratio": 0.9999246009463312,
+        "accuracy_loss_percent": 1.1600000000000055,
+        "energy_consumption": null,
+        "energy_method": "unavailable: no power measurement",
+        "ece": 0.11339553034007546,
+        "negative_log_likelihood": 0.9344913959503174,
+        "brier_score": 0.3054910386150222,
+        "execution_backend": "TensorFlow default device/threads",
+        "flops_method": "Conv/Dense estimate; multiply-add=2; excludes preprocessing/BN/activation",
+        "memory_method": "sampled process RSS; includes runtime and retained models",
+        "compression_target_met": false,
+        "validation_accuracy": 0.8066,
+        "evaluation_split": "validation"
+      }
+    },
+    "distillation": {
+      "observed_failures": [
+        "Accuracy loss reaches or exceeds five percentage points."
+      ],
+      "mitigations_to_test": [
+        "Reduce pruning sparsity, increase student capacity, or extend recovery training."
+      ],
+      "metrics": {
+        "model_name": "interaction_distillation",
+        "model_size_mb": 0.1667461395263672,
+        "artifact_path": "compressed_models/interaction_distillation.keras",
+        "weight_size_mb": 0.09696578979492188,
+        "single_inference_ms": 0.7124515250325203,
+        "single_p95_ms": 0.7265775639098138,
+        "batch_inference_ms": 1.386061543598771,
+        "batch_size": 64,
+        "throughput_images_per_second": 46173.99587743439,
+        "peak_memory_mb": 16285.1875,
+        "incremental_memory_mb": 22.4375,
+        "flops": 2595840,
+        "flops_reduction": 0.9981679078157703,
+        "compression_ratio": 547.6244809718266,
+        "accuracy_loss_percent": 51.080000000000005,
+        "energy_consumption": null,
+        "energy_method": "unavailable: no power measurement",
+        "ece": 0.20072284000515936,
+        "negative_log_likelihood": 3.24532413482666,
+        "brier_score": 0.8830066804003937,
+        "execution_backend": "TensorFlow default device/threads",
+        "flops_method": "Conv/Dense estimate; multiply-add=2; excludes preprocessing/BN/activation",
+        "memory_method": "sampled process RSS; includes runtime and retained models",
+        "compression_target_met": false,
+        "validation_accuracy": 0.3074,
+        "evaluation_split": "validation"
+      }
+    },
+    "pruning -> quantization": {
+      "observed_failures": [
+        "The serialized executable model misses the tenfold size target.",
+        "No measured single-sample latency improvement."
+      ],
+      "mitigations_to_test": [
+        "Use a smaller student and a verified INT8 export; distinguish packed storage from execution memory.",
+        "Prefer physical channel removal and target-supported integer kernels over masked dense kernels."
+      ],
+      "metrics": {
+        "model_name": "interaction_pruning_then_quantization",
+        "model_size_mb": 91.32115077972412,
+        "artifact_path": "compressed_models/interaction_pruning_then_quantization.keras",
+        "weight_size_mb": 90.76161193847656,
+        "single_inference_ms": 9.028767992276698,
+        "single_p95_ms": 11.628238920820877,
+        "batch_inference_ms": 12.24795397138223,
+        "batch_size": 64,
+        "throughput_images_per_second": 5225.362550311523,
+        "peak_memory_mb": 17881.375,
+        "incremental_memory_mb": 39.55859375,
+        "flops": 1416871936,
+        "flops_reduction": 0.0,
+        "compression_ratio": 0.9999246322732167,
+        "accuracy_loss_percent": 1.419999999999999,
+        "energy_consumption": null,
+        "energy_method": "unavailable: no power measurement",
+        "ece": 0.11372974640130998,
+        "negative_log_likelihood": 0.9586181640625,
+        "brier_score": 0.30741782415159874,
+        "execution_backend": "TensorFlow default device/threads",
+        "flops_method": "Conv/Dense estimate; multiply-add=2; excludes preprocessing/BN/activation",
+        "memory_method": "sampled process RSS; includes runtime and retained models",
+        "compression_target_met": false,
+        "validation_accuracy": 0.804,
+        "evaluation_split": "validation"
+      }
+    },
+    "quantization -> pruning": {
+      "observed_failures": [
+        "The serialized executable model misses the tenfold size target.",
+        "No measured single-sample latency improvement."
+      ],
+      "mitigations_to_test": [
+        "Use a smaller student and a verified INT8 export; distinguish packed storage from execution memory.",
+        "Prefer physical channel removal and target-supported integer kernels over masked dense kernels."
+      ],
+      "metrics": {
+        "model_name": "interaction_quantization_then_pruning",
+        "model_size_mb": 91.32115364074707,
+        "artifact_path": "compressed_models/interaction_quantization_then_pruning.keras",
+        "weight_size_mb": 90.76161193847656,
+        "single_inference_ms": 11.391572479624301,
+        "single_p95_ms": 11.851642443798482,
+        "batch_inference_ms": 12.111580523196608,
+        "batch_size": 64,
+        "throughput_images_per_second": 5284.198860538846,
+        "peak_memory_mb": 19478.8671875,
+        "incremental_memory_mb": 10.30078125,
+        "flops": 1416871936,
+        "flops_reduction": 0.0,
+        "compression_ratio": 0.9999246009463312,
+        "accuracy_loss_percent": 2.0000000000000018,
+        "energy_consumption": null,
+        "energy_method": "unavailable: no power measurement",
+        "ece": 0.11379845101535323,
+        "negative_log_likelihood": 0.9429903030395508,
+        "brier_score": 0.31350222504304637,
+        "execution_backend": "TensorFlow default device/threads",
+        "flops_method": "Conv/Dense estimate; multiply-add=2; excludes preprocessing/BN/activation",
+        "memory_method": "sampled process RSS; includes runtime and retained models",
+        "compression_target_met": false,
+        "validation_accuracy": 0.7982,
+        "evaluation_split": "validation"
+      }
+    },
+    "pruning -> distillation": {
+      "observed_failures": [
+        "Accuracy loss reaches or exceeds five percentage points."
+      ],
+      "mitigations_to_test": [
+        "Reduce pruning sparsity, increase student capacity, or extend recovery training."
+      ],
+      "metrics": {
+        "model_name": "interaction_pruning_then_distillation",
+        "model_size_mb": 0.1667461395263672,
+        "artifact_path": "compressed_models/interaction_pruning_then_distillation.keras",
+        "weight_size_mb": 0.09696578979492188,
+        "single_inference_ms": 0.6955270073376596,
+        "single_p95_ms": 0.7239542785100639,
+        "batch_inference_ms": 1.3724210439249873,
+        "batch_size": 64,
+        "throughput_images_per_second": 46632.919455217896,
+        "peak_memory_mb": 19994.41796875,
+        "incremental_memory_mb": 1.69921875,
+        "flops": 2595840,
+        "flops_reduction": 0.9981679078157703,
+        "compression_ratio": 547.6244809718266,
+        "accuracy_loss_percent": 80.82000000000001,
+        "energy_consumption": null,
+        "energy_method": "unavailable: no power measurement",
+        "ece": 0.0015878647193312643,
+        "negative_log_likelihood": 4.606886386871338,
+        "brier_score": 0.9900340546831743,
+        "execution_backend": "TensorFlow default device/threads",
+        "flops_method": "Conv/Dense estimate; multiply-add=2; excludes preprocessing/BN/activation",
+        "memory_method": "sampled process RSS; includes runtime and retained models",
+        "compression_target_met": false,
+        "validation_accuracy": 0.01,
+        "evaluation_split": "validation"
+      }
+    },
+    "quantization -> distillation": {
+      "observed_failures": [
+        "Accuracy loss reaches or exceeds five percentage points."
+      ],
+      "mitigations_to_test": [
+        "Reduce pruning sparsity, increase student capacity, or extend recovery training."
+      ],
+      "metrics": {
+        "model_name": "interaction_quantization_then_distillation",
+        "model_size_mb": 0.1676645278930664,
+        "artifact_path": "compressed_models/interaction_quantization_then_distillation.keras",
+        "weight_size_mb": 0.09696578979492188,
+        "single_inference_ms": 1.3058360200375319,
+        "single_p95_ms": 1.3891507347580045,
+        "batch_inference_ms": 2.009781019296497,
+        "batch_size": 64,
+        "throughput_images_per_second": 31844.265313244192,
+        "peak_memory_mb": 20899.39453125,
+        "incremental_memory_mb": 15.2421875,
+        "flops": 2595840,
+        "flops_reduction": 0.9981679078157703,
+        "compression_ratio": 544.6248485572411,
+        "accuracy_loss_percent": 80.44,
+        "energy_consumption": null,
+        "energy_method": "unavailable: no power measurement",
+        "ece": 0.0010886749520897868,
+        "negative_log_likelihood": 4.615289688110352,
+        "brier_score": 0.9902005255199648,
+        "execution_backend": "TensorFlow default device/threads",
+        "flops_method": "Conv/Dense estimate; multiply-add=2; excludes preprocessing/BN/activation",
+        "memory_method": "sampled process RSS; includes runtime and retained models",
+        "compression_target_met": false,
+        "validation_accuracy": 0.0138,
+        "evaluation_split": "validation"
+      }
+    },
+    "pruning -> quantization -> distillation": {
+      "observed_failures": [
+        "Accuracy loss reaches or exceeds five percentage points."
+      ],
+      "mitigations_to_test": [
+        "Reduce pruning sparsity, increase student capacity, or extend recovery training."
+      ],
+      "metrics": {
+        "model_name": "interaction_pruning_then_quantization_then_distillation",
+        "model_size_mb": 0.1676645278930664,
+        "artifact_path": "compressed_models/interaction_pruning_then_quantization_then_distillation.keras",
+        "weight_size_mb": 0.09696578979492188,
+        "single_inference_ms": 1.2725734850391746,
+        "single_p95_ms": 1.3099806441459805,
+        "batch_inference_ms": 2.024083980359137,
+        "batch_size": 64,
+        "throughput_images_per_second": 31619.24140550945,
+        "peak_memory_mb": 22157.51953125,
+        "incremental_memory_mb": 8.1796875,
+        "flops": 2595840,
+        "flops_reduction": 0.9981679078157703,
+        "compression_ratio": 544.6248485572411,
+        "accuracy_loss_percent": 80.82000000000001,
+        "energy_consumption": null,
+        "energy_method": "unavailable: no power measurement",
+        "ece": 0.0011121293157339094,
+        "negative_log_likelihood": 4.606043815612793,
+        "brier_score": 0.990017404961232,
+        "execution_backend": "TensorFlow default device/threads",
+        "flops_method": "Conv/Dense estimate; multiply-add=2; excludes preprocessing/BN/activation",
+        "memory_method": "sampled process RSS; includes runtime and retained models",
+        "compression_target_met": false,
+        "validation_accuracy": 0.01,
+        "evaluation_split": "validation"
+      }
+    }
+  },
+  "limitations": [
+    "Single-seed differences are descriptive until repeated-seed evaluation.",
+    "Process RSS includes TensorFlow caches and other retained models.",
+    "Reference QAT uses floating-point kernels; packed storage does not imply integer speedups.",
+    "Student architecture replacement explicitly reapplies preceding constraints."
+  ],
+  "selection_split": "validation"
+}

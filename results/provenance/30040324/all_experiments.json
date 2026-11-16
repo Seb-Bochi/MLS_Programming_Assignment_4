@@ -1,0 +1,2056 @@
+{
+  "quantization": {
+    "mixed_bit": {
+      "sensitivity_analysis": {
+        "conv1_conv": 74.3522943254211,
+        "conv2_block1_1_conv": 4.790426896215649,
+        "conv2_block1_2_conv": 0.8511863868770888,
+        "conv2_block1_0_conv": 7.326049436785979,
+        "conv2_block1_3_conv": 2.517055038246326,
+        "conv2_block2_1_conv": 0.09936702820505161,
+        "conv2_block2_2_conv": 0.13847807305501192,
+        "conv2_block2_3_conv": 0.5276818275015103,
+        "conv2_block3_1_conv": 0.10289406123592926,
+        "conv2_block3_2_conv": 0.13919648736737145,
+        "conv2_block3_3_conv": 0.16168767423005193,
+        "conv3_block1_1_conv": 0.08066415360417523,
+        "conv3_block1_2_conv": 0.06784890465223725,
+        "conv3_block1_0_conv": 0.37476378012434,
+        "conv3_block1_3_conv": 0.26903015799689456,
+        "conv3_block2_1_conv": 0.040208427551078785,
+        "conv3_block2_2_conv": 0.05780789733580605,
+        "conv3_block2_3_conv": 0.11911780310674658,
+        "conv3_block3_1_conv": 0.033940231939141086,
+        "conv3_block3_2_conv": 0.26093482178657723,
+        "conv3_block3_3_conv": 0.11510248785543808,
+        "conv3_block4_1_conv": 0.16822637883433345,
+        "conv3_block4_2_conv": 0.06539535961655929,
+        "conv3_block4_3_conv": 0.14777063432666182,
+        "conv4_block1_1_conv": 0.05465302207539935,
+        "conv4_block1_2_conv": 0.043881290827130215,
+        "conv4_block1_0_conv": 0.21769813971332042,
+        "conv4_block1_3_conv": 0.1546748648652283,
+        "conv4_block2_1_conv": 0.03310376034278306,
+        "conv4_block2_2_conv": 0.03685275660041043,
+        "conv4_block2_3_conv": 0.08644902595187887,
+        "conv4_block3_1_conv": 0.04367986643569566,
+        "conv4_block3_2_conv": 0.02825938539717754,
+        "conv4_block3_3_conv": 0.044064691193398176,
+        "conv4_block4_1_conv": 0.03449060556658878,
+        "conv4_block4_2_conv": 0.027828964529362565,
+        "conv4_block4_3_conv": 0.04361373124038437,
+        "conv4_block5_1_conv": 0.077294540926232,
+        "conv4_block5_2_conv": 0.028535412629025814,
+        "conv4_block5_3_conv": 0.04797924756212524,
+        "conv4_block6_1_conv": 0.0962833671505905,
+        "conv4_block6_2_conv": 0.033331659222767485,
+        "conv4_block6_3_conv": 0.05117742924721824,
+        "conv5_block1_1_conv": 0.07180829364187957,
+        "conv5_block1_2_conv": 0.03572152084529989,
+        "conv5_block1_0_conv": 0.08899556280266552,
+        "conv5_block1_3_conv": 0.057273492850072216,
+        "conv5_block2_1_conv": 0.03889989747085565,
+        "conv5_block2_2_conv": 0.022956149092578926,
+        "conv5_block2_3_conv": 0.029060476784252387,
+        "conv5_block3_1_conv": 0.07176457541800119,
+        "conv5_block3_2_conv": 0.016091897247179077,
+        "conv5_block3_3_conv": 0.02481238258860685,
+        "logits": 0.12220400979731494
+      },
+      "sensitivity_method": "mini-batch gradient-squared weighted by kernel magnitude; empirical Fisher proxy",
+      "optimal_bit_assignment": {
+        "conv5_block3_2_conv": 2,
+        "conv5_block2_2_conv": 2,
+        "conv5_block3_3_conv": 2,
+        "conv4_block4_2_conv": 2,
+        "conv4_block3_2_conv": 2,
+        "conv4_block5_2_conv": 2,
+        "conv5_block2_3_conv": 2,
+        "conv4_block2_1_conv": 2,
+        "conv4_block6_2_conv": 2,
+        "conv3_block3_1_conv": 2,
+        "conv4_block4_1_conv": 2,
+        "conv5_block1_2_conv": 2,
+        "conv4_block2_2_conv": 2,
+        "conv5_block2_1_conv": 2,
+        "conv3_block2_1_conv": 2,
+        "conv4_block4_3_conv": 2,
+        "conv4_block3_1_conv": 2,
+        "conv4_block1_2_conv": 2,
+        "conv4_block3_3_conv": 4,
+        "conv4_block5_3_conv": 4,
+        "conv4_block6_3_conv": 4,
+        "conv4_block1_1_conv": 4,
+        "conv5_block1_3_conv": 4,
+        "conv3_block2_2_conv": 4,
+        "conv3_block4_2_conv": 4,
+        "conv3_block1_2_conv": 4,
+        "conv5_block3_1_conv": 4,
+        "conv5_block1_1_conv": 4,
+        "conv4_block5_1_conv": 4,
+        "conv3_block1_1_conv": 4,
+        "conv4_block2_3_conv": 4,
+        "conv5_block1_0_conv": 4,
+        "conv4_block6_1_conv": 4,
+        "conv2_block2_1_conv": 4,
+        "conv2_block3_1_conv": 4,
+        "conv3_block3_3_conv": 4,
+        "conv3_block2_3_conv": 8,
+        "logits": 8,
+        "conv2_block2_2_conv": 8,
+        "conv2_block3_2_conv": 8,
+        "conv3_block4_3_conv": 8,
+        "conv4_block1_3_conv": 8,
+        "conv2_block3_3_conv": 8,
+        "conv3_block4_1_conv": 8,
+        "conv4_block1_0_conv": 8,
+        "conv3_block3_2_conv": 8,
+        "conv3_block1_3_conv": 8,
+        "conv3_block1_0_conv": 8,
+        "conv2_block2_3_conv": 8,
+        "conv2_block1_2_conv": 8,
+        "conv2_block1_3_conv": 8,
+        "conv2_block1_1_conv": 8,
+        "conv2_block1_0_conv": 8,
+        "conv1_conv": 8
+      },
+      "assignment_method": "sensitivity-ranked precision tiers; heuristic, not a global optimum",
+      "mixed_bit_models": {
+        "uniform_2": {
+          "model": {
+            "model_name": "cifar100_resnet50",
+            "parameters": 23792612
+          },
+          "validation_accuracy": 0.01,
+          "model_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/quant_uniform_2.keras",
+          "packed_weights_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/quant_uniform_2.packed.npz",
+          "keras_artifact_bytes": 95757174,
+          "packed_storage_bytes": 1757014,
+          "quantized_kernel_parameters": 23659712,
+          "remaining_fp32_parameters": 132900,
+          "remaining_fp32_state": "biases, batch normalization and non-kernel layer weights",
+          "execution": "FP32 reference kernels with simulated low-bit values",
+          "training_history": {}
+        },
+        "uniform_4": {
+          "model": {
+            "model_name": "cifar100_resnet50",
+            "parameters": 23792612
+          },
+          "validation_accuracy": 0.0978,
+          "model_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/quant_uniform_4.keras",
+          "packed_weights_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/quant_uniform_4.packed.npz",
+          "keras_artifact_bytes": 95757174,
+          "packed_storage_bytes": 9168435,
+          "quantized_kernel_parameters": 23659712,
+          "remaining_fp32_parameters": 132900,
+          "remaining_fp32_state": "biases, batch normalization and non-kernel layer weights",
+          "execution": "FP32 reference kernels with simulated low-bit values",
+          "training_history": {}
+        },
+        "uniform_8": {
+          "model": {
+            "model_name": "cifar100_resnet50",
+            "parameters": 23792612
+          },
+          "validation_accuracy": 0.8174,
+          "model_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/quant_uniform_8.keras",
+          "packed_weights_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/quant_uniform_8.packed.npz",
+          "keras_artifact_bytes": 95757174,
+          "packed_storage_bytes": 21067986,
+          "quantized_kernel_parameters": 23659712,
+          "remaining_fp32_parameters": 132900,
+          "remaining_fp32_state": "biases, batch normalization and non-kernel layer weights",
+          "execution": "FP32 reference kernels with simulated low-bit values",
+          "training_history": {}
+        },
+        "mixed": {
+          "model": {
+            "model_name": "cifar100_resnet50",
+            "parameters": 23792612
+          },
+          "validation_accuracy": 0.0228,
+          "model_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/quant_mixed.keras",
+          "packed_weights_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/quant_mixed.packed.npz",
+          "keras_artifact_bytes": 95757174,
+          "packed_storage_bytes": 5338250,
+          "quantized_kernel_parameters": 23659712,
+          "remaining_fp32_parameters": 132900,
+          "remaining_fp32_state": "biases, batch normalization and non-kernel layer weights",
+          "execution": "FP32 reference kernels with simulated low-bit values",
+          "training_history": {}
+        }
+      },
+      "compression_analysis": {
+        "uniform_2": {
+          "packed_storage_ratio": 54.16601575172423,
+          "validation_accuracy": 0.01,
+          "packed_storage_bytes": 1757014,
+          "keras_artifact_bytes": 95757174
+        },
+        "uniform_4": {
+          "packed_storage_ratio": 10.380228250513856,
+          "validation_accuracy": 0.0978,
+          "packed_storage_bytes": 9168435,
+          "keras_artifact_bytes": 95757174
+        },
+        "uniform_8": {
+          "packed_storage_ratio": 4.517301653798327,
+          "validation_accuracy": 0.8174,
+          "packed_storage_bytes": 21067986,
+          "keras_artifact_bytes": 95757174
+        },
+        "mixed": {
+          "packed_storage_ratio": 17.82802379056807,
+          "validation_accuracy": 0.0228,
+          "packed_storage_bytes": 5338250,
+          "keras_artifact_bytes": 95757174
+        }
+      },
+      "best_validation_model": "uniform_8"
+    },
+    "ptq_vs_qat": {
+      "ptq_results": {
+        "8": {
+          "model": {
+            "model_name": "cifar100_resnet50",
+            "parameters": 23792612
+          },
+          "validation_accuracy": 0.8174,
+          "model_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/ptq_8.keras",
+          "packed_weights_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/ptq_8.packed.npz",
+          "keras_artifact_bytes": 95757174,
+          "packed_storage_bytes": 21067986,
+          "quantized_kernel_parameters": 23659712,
+          "remaining_fp32_parameters": 132900,
+          "remaining_fp32_state": "biases, batch normalization and non-kernel layer weights",
+          "execution": "FP32 reference kernels with simulated low-bit values",
+          "training_history": {},
+          "tflite_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/ptq_int8.tflite",
+          "tflite_validation_accuracy": 0.8162,
+          "tflite_bytes": 24445752
+        },
+        "4": {
+          "model": {
+            "model_name": "cifar100_resnet50",
+            "parameters": 23792612
+          },
+          "validation_accuracy": 0.0978,
+          "model_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/ptq_4.keras",
+          "packed_weights_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/ptq_4.packed.npz",
+          "keras_artifact_bytes": 95757174,
+          "packed_storage_bytes": 9168435,
+          "quantized_kernel_parameters": 23659712,
+          "remaining_fp32_parameters": 132900,
+          "remaining_fp32_state": "biases, batch normalization and non-kernel layer weights",
+          "execution": "FP32 reference kernels with simulated low-bit values",
+          "training_history": {}
+        }
+      },
+      "qat_results": {
+        "8": {
+          "model": {
+            "model_name": "cifar100_resnet50",
+            "parameters": 23792612
+          },
+          "validation_accuracy": 0.8128,
+          "model_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/qat_8.keras",
+          "packed_weights_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/qat_8.packed.npz",
+          "keras_artifact_bytes": 95757174,
+          "packed_storage_bytes": 21069359,
+          "quantized_kernel_parameters": 23659712,
+          "remaining_fp32_parameters": 132900,
+          "remaining_fp32_state": "biases, batch normalization and non-kernel layer weights",
+          "execution": "FP32 reference kernels with simulated low-bit values",
+          "training_history": {
+            "loss": [
+              0.058494020253419876,
+              0.05603354424238205,
+              0.054197847843170166,
+              0.05311744287610054,
+              0.050308164209127426,
+              0.051596518605947495,
+              0.04985954239964485,
+              0.050849881023168564,
+              0.050045859068632126,
+              0.049476101994514465
+            ],
+            "accuracy": [
+              0.9959999918937683,
+              0.9968000054359436,
+              0.9970444440841675,
+              0.997511088848114,
+              0.9983999729156494,
+              0.9976222515106201,
+              0.9980444312095642,
+              0.9977111220359802,
+              0.998199999332428,
+              0.9982888698577881
+            ],
+            "val_loss": [
+              0.9445742964744568,
+              0.9636347889900208,
+              0.9566555619239807,
+              0.9559143781661987,
+              0.945659875869751,
+              0.9488210082054138,
+              0.9501527547836304,
+              0.9451813697814941,
+              0.9501217603683472,
+              0.9497134685516357
+            ],
+            "val_accuracy": [
+              0.8141999840736389,
+              0.8091999888420105,
+              0.8141999840736389,
+              0.8119999766349792,
+              0.8133999705314636,
+              0.8159999847412109,
+              0.8145999908447266,
+              0.8126000165939331,
+              0.8155999779701233,
+              0.8133999705314636
+            ],
+            "lr": [
+              9.999999747378752e-06,
+              9.999999747378752e-06,
+              9.999999747378752e-06,
+              9.999999747378752e-06,
+              4.999999873689376e-06,
+              4.999999873689376e-06,
+              4.999999873689376e-06,
+              2.499999936844688e-06,
+              2.499999936844688e-06,
+              2.499999936844688e-06
+            ]
+          },
+          "training_time_seconds": 345.7100749859819,
+          "tflite_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/qat_int8.tflite",
+          "tflite_validation_accuracy": 0.8136,
+          "tflite_bytes": 24445752,
+          "tflite_export_method": "Bake QAT kernel values, then recalibrate activation scales for Lite's native INT8 kernels; deployment accuracy measured separately."
+        },
+        "4": {
+          "model": {
+            "model_name": "cifar100_resnet50",
+            "parameters": 23792612
+          },
+          "validation_accuracy": 0.6818,
+          "model_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/qat_4.keras",
+          "packed_weights_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/qat_4.packed.npz",
+          "keras_artifact_bytes": 95757174,
+          "packed_storage_bytes": 9167119,
+          "quantized_kernel_parameters": 23659712,
+          "remaining_fp32_parameters": 132900,
+          "remaining_fp32_state": "biases, batch normalization and non-kernel layer weights",
+          "execution": "FP32 reference kernels with simulated low-bit values",
+          "training_history": {
+            "loss": [
+              2.0392932891845703,
+              1.4661504030227661,
+              1.2252156734466553,
+              1.1055794954299927,
+              1.0077413320541382,
+              0.9529633522033691,
+              0.8976677060127258,
+              0.8756035566329956,
+              0.8236714601516724,
+              0.7851477265357971
+            ],
+            "accuracy": [
+              0.5121555328369141,
+              0.6218000054359436,
+              0.6746444702148438,
+              0.701200008392334,
+              0.7237777709960938,
+              0.7376222014427185,
+              0.7522000074386597,
+              0.7555555701255798,
+              0.7709333300590515,
+              0.7791110873222351
+            ],
+            "val_loss": [
+              2.0351076126098633,
+              1.79244065284729,
+              1.6865956783294678,
+              1.5470000505447388,
+              1.482408046722412,
+              1.4479533433914185,
+              1.414062261581421,
+              1.395530104637146,
+              1.375046968460083,
+              1.3426202535629272
+            ],
+            "val_accuracy": [
+              0.5356000065803528,
+              0.5871999859809875,
+              0.5982000231742859,
+              0.6327999830245972,
+              0.6389999985694885,
+              0.6435999870300293,
+              0.6571999788284302,
+              0.6585999727249146,
+              0.6718000173568726,
+              0.6819999814033508
+            ],
+            "lr": [
+              9.999999747378752e-06,
+              9.999999747378752e-06,
+              9.999999747378752e-06,
+              9.999999747378752e-06,
+              9.999999747378752e-06,
+              9.999999747378752e-06,
+              9.999999747378752e-06,
+              9.999999747378752e-06,
+              9.999999747378752e-06,
+              9.999999747378752e-06
+            ]
+          },
+          "training_time_seconds": 364.0778892530361
+        }
+      },
+      "accuracy_comparison": {
+        "8": {
+          "ptq": 0.8174,
+          "qat": 0.8128,
+          "qat_gain_percentage_points": -0.46000000000000485
+        },
+        "4": {
+          "ptq": 0.0978,
+          "qat": 0.6818,
+          "qat_gain_percentage_points": 58.4
+        }
+      },
+      "training_efficiency": {
+        "8": {
+          "ptq_setup_and_evaluation_seconds": 16.42990565497894,
+          "qat_training_seconds": 345.7100749859819
+        },
+        "4": {
+          "ptq_setup_and_evaluation_seconds": 16.651156203006394,
+          "qat_training_seconds": 364.0778892530361
+        }
+      },
+      "calibration_analysis": {
+        "32": {
+          "calibration_samples": 32,
+          "validation_accuracy": 0.815
+        },
+        "128": {
+          "calibration_samples": 128,
+          "validation_accuracy": 0.8164
+        },
+        "1000": {
+          "calibration_samples": 1000,
+          "validation_accuracy": 0.8174
+        }
+      },
+      "calibration_requirements": "PTQ and this QAT initialization use training-only, unlabeled calibration data; QAT additionally uses labeled training data. Selection uses validation data."
+    },
+    "extreme_quantization": {
+      "int4_quantization": {
+        "model": {
+          "model_name": "cifar100_resnet50",
+          "parameters": 23792612
+        },
+        "validation_accuracy": 0.674,
+        "model_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/extreme_int4.keras",
+        "packed_weights_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/extreme_int4.packed.npz",
+        "keras_artifact_bytes": 95757174,
+        "packed_storage_bytes": 9168049,
+        "quantized_kernel_parameters": 23659712,
+        "remaining_fp32_parameters": 132900,
+        "remaining_fp32_state": "biases, batch normalization and non-kernel layer weights",
+        "execution": "FP32 reference kernels with simulated low-bit values",
+        "training_history": {
+          "loss": [
+            2.036649227142334,
+            1.465173602104187,
+            1.2281521558761597,
+            1.0967295169830322,
+            0.9990302920341492,
+            0.9567169547080994,
+            0.8920923471450806,
+            0.8780712485313416,
+            0.8325762152671814,
+            0.7855443358421326
+          ],
+          "accuracy": [
+            0.5124444365501404,
+            0.6248444318771362,
+            0.6762444376945496,
+            0.6988000273704529,
+            0.7281110882759094,
+            0.7371110916137695,
+            0.753777801990509,
+            0.757266640663147,
+            0.769777774810791,
+            0.7788000106811523
+          ],
+          "val_loss": [
+            2.052814245223999,
+            1.7938367128372192,
+            1.680479884147644,
+            1.5832163095474243,
+            1.5365856885910034,
+            1.4625376462936401,
+            1.4186992645263672,
+            1.391358733177185,
+            1.37781822681427,
+            1.3618603944778442
+          ],
+          "val_accuracy": [
+            0.5379999876022339,
+            0.5902000069618225,
+            0.6074000000953674,
+            0.6245999932289124,
+            0.6327999830245972,
+            0.6481999754905701,
+            0.6646000146865845,
+            0.6643999814987183,
+            0.6675999760627747,
+            0.673799991607666
+          ],
+          "lr": [
+            9.999999747378752e-06,
+            9.999999747378752e-06,
+            9.999999747378752e-06,
+            9.999999747378752e-06,
+            9.999999747378752e-06,
+            9.999999747378752e-06,
+            9.999999747378752e-06,
+            9.999999747378752e-06,
+            9.999999747378752e-06,
+            9.999999747378752e-06
+          ]
+        },
+        "training_time_seconds": 354.7567756669596,
+        "reference_latency_ms": 11.951846478041261
+      },
+      "binary_quantization": {
+        "model": {
+          "model_name": "cifar100_resnet50",
+          "parameters": 23792612
+        },
+        "validation_accuracy": 0.0164,
+        "model_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/extreme_binary.keras",
+        "packed_weights_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/extreme_binary.packed.npz",
+        "keras_artifact_bytes": 95757174,
+        "packed_storage_bytes": 3784267,
+        "quantized_kernel_parameters": 23659712,
+        "remaining_fp32_parameters": 132900,
+        "remaining_fp32_state": "biases, batch normalization and non-kernel layer weights",
+        "execution": "FP32 reference kernels with simulated low-bit values",
+        "training_history": {
+          "loss": [
+            4.681399822235107,
+            4.641880035400391,
+            4.6255011558532715,
+            4.61367130279541,
+            4.61040735244751,
+            4.61106014251709,
+            4.606199741363525,
+            4.603444576263428,
+            4.600243091583252,
+            4.597061634063721
+          ],
+          "accuracy": [
+            0.012844444252550602,
+            0.0142666669562459,
+            0.014466666616499424,
+            0.014955556020140648,
+            0.015399999916553497,
+            0.01595555618405342,
+            0.014644443988800049,
+            0.01608888804912567,
+            0.01582222245633602,
+            0.01688888855278492
+          ],
+          "val_loss": [
+            4.637877941131592,
+            4.643702983856201,
+            4.675113201141357,
+            4.620517730712891,
+            4.608678340911865,
+            4.61503267288208,
+            4.602383136749268,
+            4.599454879760742,
+            4.599208831787109,
+            4.58349609375
+          ],
+          "val_accuracy": [
+            0.01080000028014183,
+            0.013799999840557575,
+            0.012000000104308128,
+            0.013399999588727951,
+            0.014399999752640724,
+            0.01360000018030405,
+            0.014999999664723873,
+            0.017400000244379044,
+            0.017400000244379044,
+            0.01640000008046627
+          ],
+          "lr": [
+            9.999999747378752e-06,
+            9.999999747378752e-06,
+            9.999999747378752e-06,
+            9.999999747378752e-06,
+            9.999999747378752e-06,
+            9.999999747378752e-06,
+            9.999999747378752e-06,
+            9.999999747378752e-06,
+            9.999999747378752e-06,
+            9.999999747378752e-06
+          ]
+        },
+        "training_time_seconds": 1029.5845606080256,
+        "reference_latency_ms": 12.885951029602438,
+        "method": "XNOR-style sign convolutions with per-filter alpha and per-patch beta; 8-bit stem/classifier; floating-point reference execution, not bitwise XNOR/popcount"
+      },
+      "accuracy_degradation_analysis": {
+        "int4": {
+          "accuracy_loss_percentage_points": 14.42,
+          "layer_output_error": {
+            "conv1_conv": {
+              "mse": 453.400397406684,
+              "relative_mse": 0.05553559037776213,
+              "signal_to_noise_db": 12.554286069522231
+            },
+            "conv2_block1_1_conv": {
+              "mse": 0.2997583953870667,
+              "relative_mse": 0.04563618001033171,
+              "signal_to_noise_db": 13.406907154778695
+            },
+            "conv2_block1_2_conv": {
+              "mse": 0.4419042194883029,
+              "relative_mse": 0.10395327206110434,
+              "signal_to_noise_db": 9.83161836147641
+            },
+            "conv2_block1_0_conv": {
+              "mse": 0.18299200468593174,
+              "relative_mse": 0.05069217831128484,
+              "signal_to_noise_db": 12.95059046155874
+            },
+            "conv2_block1_3_conv": {
+              "mse": 0.0286132403028508,
+              "relative_mse": 0.03458502320913179,
+              "signal_to_noise_db": 14.61111928541192
+            },
+            "conv2_block2_1_conv": {
+              "mse": 0.4503561548060841,
+              "relative_mse": 0.3155547820999212,
+              "signal_to_noise_db": 5.009252338892347
+            },
+            "conv2_block2_2_conv": {
+              "mse": 0.38458624730507535,
+              "relative_mse": 0.40060694399649394,
+              "signal_to_noise_db": 3.9728152705137276
+            },
+            "conv2_block2_3_conv": {
+              "mse": 0.030922013334929943,
+              "relative_mse": 0.21013262398773774,
+              "signal_to_noise_db": 6.7750651628542515
+            },
+            "conv2_block3_1_conv": {
+              "mse": 0.6873111741410362,
+              "relative_mse": 0.3814923542580728,
+              "signal_to_noise_db": 4.1851416160635635
+            },
+            "conv2_block3_2_conv": {
+              "mse": 0.33026932511064744,
+              "relative_mse": 0.4995574039851317,
+              "signal_to_noise_db": 3.014145999273594
+            },
+            "conv2_block3_3_conv": {
+              "mse": 0.04118504592527946,
+              "relative_mse": 0.2531335960626108,
+              "signal_to_noise_db": 5.966502111581164
+            },
+            "conv3_block1_1_conv": {
+              "mse": 0.5034976245628463,
+              "relative_mse": 0.3522019979353643,
+              "signal_to_noise_db": 4.53208184740568
+            },
+            "conv3_block1_2_conv": {
+              "mse": 0.42640876521666843,
+              "relative_mse": 0.20599874651419744,
+              "signal_to_noise_db": 6.861354222697954
+            },
+            "conv3_block1_0_conv": {
+              "mse": 0.32628756513198215,
+              "relative_mse": 0.27885271616748963,
+              "signal_to_noise_db": 5.546251209023552
+            },
+            "conv3_block1_3_conv": {
+              "mse": 0.03480158301277293,
+              "relative_mse": 0.23551542599847794,
+              "signal_to_noise_db": 6.279806417978895
+            },
+            "conv3_block2_1_conv": {
+              "mse": 0.47176293945974773,
+              "relative_mse": 0.2554400942021746,
+              "signal_to_noise_db": 5.927109343078024
+            },
+            "conv3_block2_2_conv": {
+              "mse": 0.15869946653644243,
+              "relative_mse": 0.25003237791673977,
+              "signal_to_noise_db": 6.020037487676153
+            },
+            "conv3_block2_3_conv": {
+              "mse": 0.014619819664706787,
+              "relative_mse": 0.2663732595673744,
+              "signal_to_noise_db": 5.745093748666848
+            },
+            "conv3_block3_1_conv": {
+              "mse": 0.41765965272982913,
+              "relative_mse": 0.23600114603581562,
+              "signal_to_noise_db": 6.270858880645446
+            },
+            "conv3_block3_2_conv": {
+              "mse": 0.4026717394590378,
+              "relative_mse": 0.4851131509207236,
+              "signal_to_noise_db": 3.141569519357035
+            },
+            "conv3_block3_3_conv": {
+              "mse": 0.04046048575805293,
+              "relative_mse": 0.7734124234948885,
+              "signal_to_noise_db": 1.1158885603856548
+            },
+            "conv3_block4_1_conv": {
+              "mse": 0.8856890946626663,
+              "relative_mse": 0.49334715094629217,
+              "signal_to_noise_db": 3.068473754820891
+            },
+            "conv3_block4_2_conv": {
+              "mse": 0.39504843453566235,
+              "relative_mse": 0.43022391393366105,
+              "signal_to_noise_db": 3.6630545308202738
+            },
+            "conv3_block4_3_conv": {
+              "mse": 0.043423167843785554,
+              "relative_mse": 0.33691324159708663,
+              "signal_to_noise_db": 4.724819197415428
+            },
+            "conv4_block1_1_conv": {
+              "mse": 0.5505029244555367,
+              "relative_mse": 0.36877152036070165,
+              "signal_to_noise_db": 4.332426261969965
+            },
+            "conv4_block1_2_conv": {
+              "mse": 0.4905136227607727,
+              "relative_mse": 0.22806904900678826,
+              "signal_to_noise_db": 6.419336483384715
+            },
+            "conv4_block1_0_conv": {
+              "mse": 0.46147193097405964,
+              "relative_mse": 0.36407741519065095,
+              "signal_to_noise_db": 4.388062608141826
+            },
+            "conv4_block1_3_conv": {
+              "mse": 0.03271181188109848,
+              "relative_mse": 0.31554820342013906,
+              "signal_to_noise_db": 5.009342881462839
+            },
+            "conv4_block2_1_conv": {
+              "mse": 0.7072186056110594,
+              "relative_mse": 0.2626228532339452,
+              "signal_to_noise_db": 5.806674846382027
+            },
+            "conv4_block2_2_conv": {
+              "mse": 0.2738112807273865,
+              "relative_mse": 0.3958939829721934,
+              "signal_to_noise_db": 4.024210988586364
+            },
+            "conv4_block2_3_conv": {
+              "mse": 0.03194809736063083,
+              "relative_mse": 0.853760076143735,
+              "signal_to_noise_db": 0.6866415770244639
+            },
+            "conv4_block3_1_conv": {
+              "mse": 0.6850949227809906,
+              "relative_mse": 0.39981470544273584,
+              "signal_to_noise_db": 3.9814123629298184
+            },
+            "conv4_block3_2_conv": {
+              "mse": 0.16190191937817466,
+              "relative_mse": 0.4288076708292977,
+              "signal_to_noise_db": 3.677374542643579
+            },
+            "conv4_block3_3_conv": {
+              "mse": 0.03803262280093299,
+              "relative_mse": 0.8640951409397669,
+              "signal_to_noise_db": 0.6343843702302561
+            },
+            "conv4_block4_1_conv": {
+              "mse": 0.6122350576851103,
+              "relative_mse": 0.3881769881498068,
+              "signal_to_noise_db": 4.109702139651224
+            },
+            "conv4_block4_2_conv": {
+              "mse": 0.1787610472076469,
+              "relative_mse": 0.4912063641199273,
+              "signal_to_noise_db": 3.087360150666814
+            },
+            "conv4_block4_3_conv": {
+              "mse": 0.03822498773742053,
+              "relative_mse": 0.7845411467046831,
+              "signal_to_noise_db": 1.0538427410613667
+            },
+            "conv4_block5_1_conv": {
+              "mse": 0.7527939511670007,
+              "relative_mse": 0.5722349549208853,
+              "signal_to_noise_db": 2.4242561688100146
+            },
+            "conv4_block5_2_conv": {
+              "mse": 0.13196946308016777,
+              "relative_mse": 0.5849656878463965,
+              "signal_to_noise_db": 2.328696074494476
+            },
+            "conv4_block5_3_conv": {
+              "mse": 0.07976124125222366,
+              "relative_mse": 0.6955073612690715,
+              "signal_to_noise_db": 1.57698269062849
+            },
+            "conv4_block6_1_conv": {
+              "mse": 0.7521454509761598,
+              "relative_mse": 0.6161879616737163,
+              "signal_to_noise_db": 2.1028679065028055
+            },
+            "conv4_block6_2_conv": {
+              "mse": 0.15482121167911422,
+              "relative_mse": 0.4918502615779471,
+              "signal_to_noise_db": 3.0816709330651033
+            },
+            "conv4_block6_3_conv": {
+              "mse": 0.08821195550262928,
+              "relative_mse": 0.5858695795934104,
+              "signal_to_noise_db": 2.321990515021345
+            },
+            "conv5_block1_1_conv": {
+              "mse": 0.7853275686502457,
+              "relative_mse": 0.5214301332594306,
+              "signal_to_noise_db": 2.828038747209176
+            },
+            "conv5_block1_2_conv": {
+              "mse": 0.1833951613969273,
+              "relative_mse": 0.2763051215023599,
+              "signal_to_noise_db": 5.586110650668402
+            },
+            "conv5_block1_0_conv": {
+              "mse": 0.4014357411199146,
+              "relative_mse": 0.7547121380016769,
+              "signal_to_noise_db": 1.2221866521363836
+            },
+            "conv5_block1_3_conv": {
+              "mse": 0.021145045705553558,
+              "relative_mse": 0.5265429843895408,
+              "signal_to_noise_db": 2.785661693575306
+            },
+            "conv5_block2_1_conv": {
+              "mse": 2.811108112335205,
+              "relative_mse": 0.33536032139441013,
+              "signal_to_noise_db": 4.744883228236793
+            },
+            "conv5_block2_2_conv": {
+              "mse": 0.0923738107085228,
+              "relative_mse": 0.23685992210403278,
+              "signal_to_noise_db": 6.255084178823017
+            },
+            "conv5_block2_3_conv": {
+              "mse": 0.009540792063085569,
+              "relative_mse": 0.5119905504197074,
+              "signal_to_noise_db": 2.907380545289526
+            },
+            "conv5_block3_1_conv": {
+              "mse": 2.7593221068382263,
+              "relative_mse": 0.4738038733515077,
+              "signal_to_noise_db": 3.2440139323691275
+            },
+            "conv5_block3_2_conv": {
+              "mse": 0.1108973692688677,
+              "relative_mse": 0.386071654582144,
+              "signal_to_noise_db": 4.133320831479303
+            },
+            "conv5_block3_3_conv": {
+              "mse": 0.02062015447558628,
+              "relative_mse": 0.5404040332406143,
+              "signal_to_noise_db": 2.6728141833319263
+            },
+            "logits": {
+              "mse": 41.95565773010254,
+              "relative_mse": 0.20341946074529788,
+              "signal_to_noise_db": 6.916075013149207
+            }
+          }
+        },
+        "binary": {
+          "accuracy_loss_percentage_points": 80.18,
+          "layer_output_error": {
+            "conv1_conv": {
+              "mse": 35.32687499788072,
+              "relative_mse": 0.004327077943535538,
+              "signal_to_noise_db": 23.638052817963047
+            },
+            "conv2_block1_1_conv": {
+              "mse": 4.701156351301405,
+              "relative_mse": 0.7157191284923783,
+              "signal_to_noise_db": 1.452573755656118
+            },
+            "conv2_block1_2_conv": {
+              "mse": 3.5117138690418668,
+              "relative_mse": 0.8260933730209052,
+              "signal_to_noise_db": 0.8297086176448775
+            },
+            "conv2_block1_0_conv": {
+              "mse": 2.8211944897969565,
+              "relative_mse": 0.7815231838847452,
+              "signal_to_noise_db": 1.0705813410817313
+            },
+            "conv2_block1_3_conv": {
+              "mse": 0.7985737919807434,
+              "relative_mse": 0.9652417145885667,
+              "signal_to_noise_db": 0.15363917571211166
+            },
+            "conv2_block2_1_conv": {
+              "mse": 1.3427009284496307,
+              "relative_mse": 0.9408013954749247,
+              "signal_to_noise_db": 0.26502047085740765
+            },
+            "conv2_block2_2_conv": {
+              "mse": 0.8432535181442896,
+              "relative_mse": 0.8783809022949892,
+              "signal_to_noise_db": 0.5631711519597173
+            },
+            "conv2_block2_3_conv": {
+              "mse": 0.1317197750839922,
+              "relative_mse": 0.8951106019415547,
+              "signal_to_noise_db": 0.48123298935263303
+            },
+            "conv2_block3_1_conv": {
+              "mse": 1.482830696635776,
+              "relative_mse": 0.8230457974623896,
+              "signal_to_noise_db": 0.8457599828490657
+            },
+            "conv2_block3_2_conv": {
+              "mse": 0.6851267500056161,
+              "relative_mse": 1.0363061738140873,
+              "signal_to_noise_db": -0.1548808547994329
+            },
+            "conv2_block3_3_conv": {
+              "mse": 0.12738587541712654,
+              "relative_mse": 0.7829454601173224,
+              "signal_to_noise_db": 1.0626848978760726
+            },
+            "conv3_block1_1_conv": {
+              "mse": 1.1837722758452098,
+              "relative_mse": 0.8280614253446898,
+              "signal_to_noise_db": 0.8193744618759684
+            },
+            "conv3_block1_2_conv": {
+              "mse": 1.6749464240339067,
+              "relative_mse": 0.8091692572363065,
+              "signal_to_noise_db": 0.9196062573595538
+            },
+            "conv3_block1_0_conv": {
+              "mse": 0.9591514849000506,
+              "relative_mse": 0.8197125032094699,
+              "signal_to_noise_db": 0.8633844049778201
+            },
+            "conv3_block1_3_conv": {
+              "mse": 0.11926576784915394,
+              "relative_mse": 0.8071163921399732,
+              "signal_to_noise_db": 0.9306383229252531
+            },
+            "conv3_block2_1_conv": {
+              "mse": 1.624482148223453,
+              "relative_mse": 0.8795898072179011,
+              "signal_to_noise_db": 0.5571981193365404
+            },
+            "conv3_block2_2_conv": {
+              "mse": 0.5889335456821654,
+              "relative_mse": 0.9278698793107464,
+              "signal_to_noise_db": 0.3251292319876078
+            },
+            "conv3_block2_3_conv": {
+              "mse": 0.048511823949714504,
+              "relative_mse": 0.8838859144233663,
+              "signal_to_noise_db": 0.5360378694826822
+            },
+            "conv3_block3_1_conv": {
+              "mse": 1.745500044690238,
+              "relative_mse": 0.9863054960181529,
+              "signal_to_noise_db": 0.05988546838157017
+            },
+            "conv3_block3_2_conv": {
+              "mse": 0.8768349438905716,
+              "relative_mse": 1.0563546451995838,
+              "signal_to_noise_db": -0.23809746413722896
+            },
+            "conv3_block3_3_conv": {
+              "mse": 0.046326470820026264,
+              "relative_mse": 0.8855422122990834,
+              "signal_to_noise_db": 0.5279073189726933
+            },
+            "conv3_block4_1_conv": {
+              "mse": 1.666205061806573,
+              "relative_mse": 0.9281106937955992,
+              "signal_to_noise_db": 0.32400223309509457
+            },
+            "conv3_block4_2_conv": {
+              "mse": 0.8743395523892509,
+              "relative_mse": 0.9521915579238966,
+              "signal_to_noise_db": 0.21275673274572987
+            },
+            "conv3_block4_3_conv": {
+              "mse": 0.10810781973931524,
+              "relative_mse": 0.8387908528782944,
+              "signal_to_noise_db": 0.7634631421783172
+            },
+            "conv4_block1_1_conv": {
+              "mse": 1.3220701184537675,
+              "relative_mse": 0.8856298231073735,
+              "signal_to_noise_db": 0.5274776725028321
+            },
+            "conv4_block1_2_conv": {
+              "mse": 1.8682575192716386,
+              "relative_mse": 0.8686643875900513,
+              "signal_to_noise_db": 0.6114798278096647
+            },
+            "conv4_block1_0_conv": {
+              "mse": 1.0904977056715224,
+              "relative_mse": 0.8603461214080663,
+              "signal_to_noise_db": 0.6532679483017356
+            },
+            "conv4_block1_3_conv": {
+              "mse": 0.09007932018074724,
+              "relative_mse": 0.8689328414965121,
+              "signal_to_noise_db": 0.6101378821712016
+            },
+            "conv4_block2_1_conv": {
+              "mse": 2.531332790851593,
+              "relative_mse": 0.9400004959480593,
+              "signal_to_noise_db": 0.26871917264717626
+            },
+            "conv4_block2_2_conv": {
+              "mse": 0.6078299432992935,
+              "relative_mse": 0.8788396759376155,
+              "signal_to_noise_db": 0.5609034472852984
+            },
+            "conv4_block2_3_conv": {
+              "mse": 0.036869719779739775,
+              "relative_mse": 0.9852822974471884,
+              "signal_to_noise_db": 0.06439320102861049
+            },
+            "conv4_block3_1_conv": {
+              "mse": 1.7363973723517523,
+              "relative_mse": 1.0133445466801225,
+              "signal_to_noise_db": -0.05757134679574617
+            },
+            "conv4_block3_2_conv": {
+              "mse": 0.3467138351665603,
+              "relative_mse": 0.9182939440933386,
+              "signal_to_noise_db": 0.3701827973126399
+            },
+            "conv4_block3_3_conv": {
+              "mse": 0.04094105834762255,
+              "relative_mse": 0.9301743339732091,
+              "signal_to_noise_db": 0.3143564801907211
+            },
+            "conv4_block4_1_conv": {
+              "mse": 1.588400489754147,
+              "relative_mse": 1.007097699402845,
+              "signal_to_noise_db": -0.03071603873751138
+            },
+            "conv4_block4_2_conv": {
+              "mse": 0.3326934352517128,
+              "relative_mse": 0.9141875998675152,
+              "signal_to_noise_db": 0.3896467382073779
+            },
+            "conv4_block4_3_conv": {
+              "mse": 0.04633153954313861,
+              "relative_mse": 0.950922454480824,
+              "signal_to_noise_db": 0.21854897325679484
+            },
+            "conv4_block5_1_conv": {
+              "mse": 1.3309933609432645,
+              "relative_mse": 1.0117521862637857,
+              "signal_to_noise_db": -0.050741515180369866
+            },
+            "conv4_block5_2_conv": {
+              "mse": 0.21554775618844563,
+              "relative_mse": 0.9554334655883723,
+              "signal_to_noise_db": 0.19799550925991474
+            },
+            "conv4_block5_3_conv": {
+              "mse": 0.09750761826419169,
+              "relative_mse": 0.8502533964849652,
+              "signal_to_noise_db": 0.704516245269874
+            },
+            "conv4_block6_1_conv": {
+              "mse": 1.22847428255611,
+              "relative_mse": 1.006415797841239,
+              "signal_to_noise_db": -0.027774453323418064
+            },
+            "conv4_block6_2_conv": {
+              "mse": 0.2977289507786433,
+              "relative_mse": 0.9458527079823797,
+              "signal_to_noise_db": 0.2417648843003499
+            },
+            "conv4_block6_3_conv": {
+              "mse": 0.1179573316540983,
+              "relative_mse": 0.7834268259032893,
+              "signal_to_noise_db": 1.060015615317012
+            },
+            "conv5_block1_1_conv": {
+              "mse": 1.3565670483642154,
+              "relative_mse": 0.9007132374324344,
+              "signal_to_noise_db": 0.45413454552106297
+            },
+            "conv5_block1_2_conv": {
+              "mse": 0.5422046052085029,
+              "relative_mse": 0.8168912864447281,
+              "signal_to_noise_db": 0.8783573641577397
+            },
+            "conv5_block1_0_conv": {
+              "mse": 0.5953789121574826,
+              "relative_mse": 1.119331553443474,
+              "signal_to_noise_db": -0.4895874649544777
+            },
+            "conv5_block1_3_conv": {
+              "mse": 0.04879689454618427,
+              "relative_mse": 1.2151150128061141,
+              "signal_to_noise_db": -0.846173866282139
+            },
+            "conv5_block2_1_conv": {
+              "mse": 6.978708545366923,
+              "relative_mse": 0.8325478235513317,
+              "signal_to_noise_db": 0.7959081018451124
+            },
+            "conv5_block2_2_conv": {
+              "mse": 0.3476920376221339,
+              "relative_mse": 0.8915330905556407,
+              "signal_to_noise_db": 0.4986253271407427
+            },
+            "conv5_block2_3_conv": {
+              "mse": 0.017010248110940058,
+              "relative_mse": 0.9128263393133211,
+              "signal_to_noise_db": 0.3961183698007373
+            },
+            "conv5_block3_1_conv": {
+              "mse": 5.2874887519412574,
+              "relative_mse": 0.9079159858734005,
+              "signal_to_noise_db": 0.4195433711734084
+            },
+            "conv5_block3_2_conv": {
+              "mse": 0.27415381454759175,
+              "relative_mse": 0.9544231525977992,
+              "signal_to_noise_db": 0.20259034002942783
+            },
+            "conv5_block3_3_conv": {
+              "mse": 0.02850099311520656,
+              "relative_mse": 0.7469416220453744,
+              "signal_to_noise_db": 1.267133395691874
+            },
+            "logits": {
+              "mse": 176.00212890625,
+              "relative_mse": 0.8533356426550837,
+              "signal_to_noise_db": 0.6888011410585658
+            }
+          }
+        }
+      },
+      "performance_improvements": {
+        "int4": {
+          "baseline_latency_ms": 3.568507556337863,
+          "reference_latency_ms": 11.951846478041261,
+          "measured_speedup": 0.2985737444748948,
+          "native_low_bit_acceleration": false
+        },
+        "binary": {
+          "baseline_latency_ms": 3.568507556337863,
+          "reference_latency_ms": 12.885951029602438,
+          "measured_speedup": 0.27693008829073285,
+          "native_low_bit_acceleration": false
+        }
+      }
+    },
+    "dynamic_vs_static": {
+      "float32": {
+        "tflite_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/quant_float32.tflite",
+        "artifact_bytes": 94782244,
+        "validation_accuracy": 0.8182,
+        "conversion_seconds": 21.908288732985966,
+        "end_to_end_ms_per_sample": 34.55314720838796,
+        "calibration_samples": 0,
+        "timing_includes_interpreter_setup": true
+      },
+      "dynamic": {
+        "tflite_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/quant_dynamic.tflite",
+        "artifact_bytes": 24123000,
+        "validation_accuracy": 0.8156,
+        "conversion_seconds": 25.299042825005017,
+        "end_to_end_ms_per_sample": 26.249447195418178,
+        "calibration_samples": 0,
+        "timing_includes_interpreter_setup": true
+      },
+      "int8": {
+        "tflite_path": "/zhome/90/1/186889/MLS_Programming_Assignment_4/outputs/dtu_part2_fixed/compressed_models/quant_int8.tflite",
+        "artifact_bytes": 24445752,
+        "validation_accuracy": 0.8162,
+        "conversion_seconds": 83.21990758506581,
+        "end_to_end_ms_per_sample": 7.976414981414564,
+        "calibration_samples": 1000,
+        "timing_includes_interpreter_setup": true
+      },
+      "tradeoffs": "Dynamic-range quantization calibrates no representative activation ranges; supported kernels quantize activations at inference. Full INT8 fixes activation ranges using calibration. Inspect measured accuracy and target-device latency."
+    },
+    "error_analysis": {
+      "8": {
+        "layer_errors": {
+          "conv1_conv": {
+            "mse": 0.6061053226391474,
+            "relative_mse": 7.423993696608265e-05,
+            "signal_to_noise_db": 41.29362405529686
+          },
+          "conv2_block1_1_conv": {
+            "mse": 0.0008264808630984691,
+            "relative_mse": 0.00012582609869776277,
+            "signal_to_noise_db": 39.00229268709147
+          },
+          "conv2_block1_2_conv": {
+            "mse": 0.0029597257833100027,
+            "relative_mse": 0.0006962440411520758,
+            "signal_to_noise_db": 31.5723850873864
+          },
+          "conv2_block1_0_conv": {
+            "mse": 0.0003842884592207459,
+            "relative_mse": 0.0001064550286293716,
+            "signal_to_noise_db": 39.72833818918885
+          },
+          "conv2_block1_3_conv": {
+            "mse": 0.00022949942366621044,
+            "relative_mse": 0.00027739755476724004,
+            "signal_to_noise_db": 35.5689737150994
+          },
+          "conv2_block2_1_conv": {
+            "mse": 0.003455700592086133,
+            "relative_mse": 0.002421334394348055,
+            "signal_to_noise_db": 26.159452289012634
+          },
+          "conv2_block2_2_conv": {
+            "mse": 0.005620268018295367,
+            "relative_mse": 0.005854391338815889,
+            "signal_to_noise_db": 22.325182503669048
+          },
+          "conv2_block2_3_conv": {
+            "mse": 0.0005162617251496866,
+            "relative_mse": 0.0035082913196856904,
+            "signal_to_noise_db": 24.549043510873744
+          },
+          "conv2_block3_1_conv": {
+            "mse": 0.0098192664122002,
+            "relative_mse": 0.005450187923045175,
+            "signal_to_noise_db": 22.635885229463856
+          },
+          "conv2_block3_2_conv": {
+            "mse": 0.006637121990530027,
+            "relative_mse": 0.01003915041280629,
+            "signal_to_noise_db": 19.983030388485904
+          },
+          "conv2_block3_3_conv": {
+            "mse": 0.0008109791977201692,
+            "relative_mse": 0.004984481042544437,
+            "signal_to_noise_db": 23.023800514128236
+          },
+          "conv3_block1_1_conv": {
+            "mse": 0.009518295629984803,
+            "relative_mse": 0.006658150057273318,
+            "signal_to_noise_db": 21.766464212082795
+          },
+          "conv3_block1_2_conv": {
+            "mse": 0.009251580508943234,
+            "relative_mse": 0.004469453124747793,
+            "signal_to_noise_db": 23.49745613206787
+          },
+          "conv3_block1_0_conv": {
+            "mse": 0.004907268571615633,
+            "relative_mse": 0.004193862458732871,
+            "signal_to_noise_db": 23.773858166920483
+          },
+          "conv3_block1_3_conv": {
+            "mse": 0.0007177784104391725,
+            "relative_mse": 0.004857476972959761,
+            "signal_to_noise_db": 23.135892495115485
+          },
+          "conv3_block2_1_conv": {
+            "mse": 0.007801678342123826,
+            "relative_mse": 0.004224285724795076,
+            "signal_to_noise_db": 23.742467144076826
+          },
+          "conv3_block2_2_conv": {
+            "mse": 0.0021422002917259103,
+            "relative_mse": 0.003375055030768914,
+            "signal_to_noise_db": 24.717191415397917
+          },
+          "conv3_block2_3_conv": {
+            "mse": 0.00020727052995223657,
+            "relative_mse": 0.0037764711153666385,
+            "signal_to_noise_db": 24.229138326892695
+          },
+          "conv3_block3_1_conv": {
+            "mse": 0.0036510509800993735,
+            "relative_mse": 0.0020630487285685116,
+            "signal_to_noise_db": 26.854905140052843
+          },
+          "conv3_block3_2_conv": {
+            "mse": 0.001637771415213744,
+            "relative_mse": 0.0019730822252130107,
+            "signal_to_noise_db": 27.048548158059972
+          },
+          "conv3_block3_3_conv": {
+            "mse": 0.00047551773281561,
+            "relative_mse": 0.009089641789051372,
+            "signal_to_noise_db": 20.41453231420903
+          },
+          "conv3_block4_1_conv": {
+            "mse": 0.017126202428092558,
+            "relative_mse": 0.009539649099605297,
+            "signal_to_noise_db": 20.20467599814549
+          },
+          "conv3_block4_2_conv": {
+            "mse": 0.006085190792671508,
+            "relative_mse": 0.006627021830711441,
+            "signal_to_noise_db": 21.786815987552288
+          },
+          "conv3_block4_3_conv": {
+            "mse": 0.0006891801895108074,
+            "relative_mse": 0.005347236123534242,
+            "signal_to_noise_db": 22.718706378776293
+          },
+          "conv4_block1_1_conv": {
+            "mse": 0.009208577892018689,
+            "relative_mse": 0.006168652551588679,
+            "signal_to_noise_db": 22.098096906374067
+          },
+          "conv4_block1_2_conv": {
+            "mse": 0.007585596939962771,
+            "relative_mse": 0.003526996601050296,
+            "signal_to_noise_db": 24.525949588598174
+          },
+          "conv4_block1_0_conv": {
+            "mse": 0.007658015069965687,
+            "relative_mse": 0.006041776639110224,
+            "signal_to_noise_db": 22.188353343747174
+          },
+          "conv4_block1_3_conv": {
+            "mse": 0.0004621603632889067,
+            "relative_mse": 0.004458141079371972,
+            "signal_to_noise_db": 23.508461922435572
+          },
+          "conv4_block2_1_conv": {
+            "mse": 0.010670079435739253,
+            "relative_mse": 0.003962292116488494,
+            "signal_to_noise_db": 24.02053509639869
+          },
+          "conv4_block2_2_conv": {
+            "mse": 0.002714931822588874,
+            "relative_mse": 0.003925423269221655,
+            "signal_to_noise_db": 24.06113507434311
+          },
+          "conv4_block2_3_conv": {
+            "mse": 0.0003452993413601588,
+            "relative_mse": 0.00922755394927874,
+            "signal_to_noise_db": 20.349134070040943
+          },
+          "conv4_block3_1_conv": {
+            "mse": 0.010246587477417456,
+            "relative_mse": 0.005979808370856253,
+            "signal_to_noise_db": 22.233127332044283
+          },
+          "conv4_block3_2_conv": {
+            "mse": 0.001765902160615143,
+            "relative_mse": 0.00467710571507828,
+            "signal_to_noise_db": 23.300228137655846
+          },
+          "conv4_block3_3_conv": {
+            "mse": 0.00040849302442640893,
+            "relative_mse": 0.009280896544058238,
+            "signal_to_noise_db": 20.324100684653853
+          },
+          "conv4_block4_1_conv": {
+            "mse": 0.00796807443516122,
+            "relative_mse": 0.005052018986448149,
+            "signal_to_noise_db": 22.965350259523824
+          },
+          "conv4_block4_2_conv": {
+            "mse": 0.0013878924170664202,
+            "relative_mse": 0.0038137032570910727,
+            "signal_to_noise_db": 24.186531022762672
+          },
+          "conv4_block4_3_conv": {
+            "mse": 0.0005329465170183943,
+            "relative_mse": 0.010938354629857969,
+            "signal_to_noise_db": 19.610480005724803
+          },
+          "conv4_block5_1_conv": {
+            "mse": 0.010643455794908933,
+            "relative_mse": 0.008090603594197866,
+            "signal_to_noise_db": 20.920190769228455
+          },
+          "conv4_block5_2_conv": {
+            "mse": 0.001479435459865878,
+            "relative_mse": 0.006557721469845454,
+            "signal_to_noise_db": 21.83247033332713
+          },
+          "conv4_block5_3_conv": {
+            "mse": 0.001043783442582935,
+            "relative_mse": 0.009101652086776742,
+            "signal_to_noise_db": 20.40879769541652
+          },
+          "conv4_block6_1_conv": {
+            "mse": 0.011095929683910476,
+            "relative_mse": 0.009090234190647776,
+            "signal_to_noise_db": 20.414249279556024
+          },
+          "conv4_block6_2_conv": {
+            "mse": 0.002084904680183778,
+            "relative_mse": 0.006623516901798119,
+            "signal_to_noise_db": 21.78911351122698
+          },
+          "conv4_block6_3_conv": {
+            "mse": 0.0009840869267160695,
+            "relative_mse": 0.006535923512333088,
+            "signal_to_noise_db": 21.846930388449866
+          },
+          "conv5_block1_1_conv": {
+            "mse": 0.009939838252547715,
+            "relative_mse": 0.006599706150022368,
+            "signal_to_noise_db": 21.80475400861891
+          },
+          "conv5_block1_2_conv": {
+            "mse": 0.0027174606220796704,
+            "relative_mse": 0.004094155383611893,
+            "signal_to_noise_db": 23.878356787803412
+          },
+          "conv5_block1_0_conv": {
+            "mse": 0.005630293628200889,
+            "relative_mse": 0.010585133575456599,
+            "signal_to_noise_db": 19.753036571799786
+          },
+          "conv5_block1_3_conv": {
+            "mse": 0.0003433231524670393,
+            "relative_mse": 0.00854925545337277,
+            "signal_to_noise_db": 20.680717059234706
+          },
+          "conv5_block2_1_conv": {
+            "mse": 0.041713166568014354,
+            "relative_mse": 0.004976308412061448,
+            "signal_to_noise_db": 23.030927116159184
+          },
+          "conv5_block2_2_conv": {
+            "mse": 0.0013667193222014855,
+            "relative_mse": 0.0035044676593043536,
+            "signal_to_noise_db": 24.553779435133567
+          },
+          "conv5_block2_3_conv": {
+            "mse": 0.00016939453133899305,
+            "relative_mse": 0.009090272460071911,
+            "signal_to_noise_db": 20.414230996017455
+          },
+          "conv5_block3_1_conv": {
+            "mse": 0.04359994766612848,
+            "relative_mse": 0.007486557669704426,
+            "signal_to_noise_db": 21.257178256513694
+          },
+          "conv5_block3_2_conv": {
+            "mse": 0.0016080164124206123,
+            "relative_mse": 0.0055980548594740135,
+            "signal_to_noise_db": 22.519628498766263
+          },
+          "conv5_block3_3_conv": {
+            "mse": 0.00031936273121068045,
+            "relative_mse": 0.0083697194517784,
+            "signal_to_noise_db": 20.77289099066064
+          },
+          "logits": {
+            "mse": 0.1682344490289688,
+            "relative_mse": 0.000815674518092497,
+            "signal_to_noise_db": 30.884831049659496
+          }
+        },
+        "bottleneck_layers": [
+          "conv4_block4_3_conv",
+          "conv5_block1_0_conv",
+          "conv2_block3_2_conv",
+          "conv3_block4_1_conv",
+          "conv4_block3_3_conv"
+        ],
+        "interpretation": "Cumulative output error; includes all upstream quantization."
+      },
+      "4": {
+        "layer_errors": {
+          "conv1_conv": {
+            "mse": 313.776613023546,
+            "relative_mse": 0.038433511639309255,
+            "signal_to_noise_db": 14.152899325822453
+          },
+          "conv2_block1_1_conv": {
+            "mse": 0.3849756163027551,
+            "relative_mse": 0.05860992317661353,
+            "signal_to_noise_db": 12.32028847872684
+          },
+          "conv2_block1_2_conv": {
+            "mse": 0.9426021940178342,
+            "relative_mse": 0.2217371502666167,
+            "signal_to_noise_db": 6.541615382605967
+          },
+          "conv2_block1_0_conv": {
+            "mse": 0.1919820499089029,
+            "relative_mse": 0.05318258753026426,
+            "signal_to_noise_db": 12.742305364520304
+          },
+          "conv2_block1_3_conv": {
+            "mse": 0.07802156690094206,
+            "relative_mse": 0.09430521232553532,
+            "signal_to_noise_db": 10.254643027912094
+          },
+          "conv2_block2_1_conv": {
+            "mse": 0.7783272282944785,
+            "relative_mse": 0.5453569942497026,
+            "signal_to_noise_db": 2.633191126291642
+          },
+          "conv2_block2_2_conv": {
+            "mse": 0.9126459492577447,
+            "relative_mse": 0.9506640116356013,
+            "signal_to_noise_db": 0.2197294644335953
+          },
+          "conv2_block2_3_conv": {
+            "mse": 0.08784857537183496,
+            "relative_mse": 0.5969809098948846,
+            "signal_to_noise_db": 2.240395564080991
+          },
+          "conv2_block3_1_conv": {
+            "mse": 1.2816323902871873,
+            "relative_mse": 0.711370593494427,
+            "signal_to_noise_db": 1.4790409156387796
+          },
+          "conv2_block3_2_conv": {
+            "mse": 0.6736520909600787,
+            "relative_mse": 1.0189498816955787,
+            "signal_to_noise_db": -0.0815282322297193
+          },
+          "conv2_block3_3_conv": {
+            "mse": 0.09430915179351966,
+            "relative_mse": 0.5796476414866658,
+            "signal_to_noise_db": 2.3683592688535664
+          },
+          "conv3_block1_1_conv": {
+            "mse": 1.6253814432356093,
+            "relative_mse": 1.1369717825613952,
+            "signal_to_noise_db": -0.5574968647318161
+          },
+          "conv3_block1_2_conv": {
+            "mse": 1.810871637529797,
+            "relative_mse": 0.8748349420999851,
+            "signal_to_noise_db": 0.580738789744242
+          },
+          "conv3_block1_0_conv": {
+            "mse": 0.8569017814265357,
+            "relative_mse": 0.7323275992540378,
+            "signal_to_noise_db": 1.3529459828446782
+          },
+          "conv3_block1_3_conv": {
+            "mse": 0.1076404017706712,
+            "relative_mse": 0.7284431592770535,
+            "signal_to_noise_db": 1.3760433075111163
+          },
+          "conv3_block2_1_conv": {
+            "mse": 1.1079982320467632,
+            "relative_mse": 0.5999351561909133,
+            "signal_to_noise_db": 2.218956876668903
+          },
+          "conv3_block2_2_conv": {
+            "mse": 0.32794367025295895,
+            "relative_mse": 0.5166780801828436,
+            "signal_to_noise_db": 2.8677996279644375
+          },
+          "conv3_block2_3_conv": {
+            "mse": 0.03048669050137202,
+            "relative_mse": 0.5554678038797167,
+            "signal_to_noise_db": 2.553411086449871
+          },
+          "conv3_block3_1_conv": {
+            "mse": 0.8688560542133119,
+            "relative_mse": 0.49095243745543077,
+            "signal_to_noise_db": 3.0896057946803723
+          },
+          "conv3_block3_2_conv": {
+            "mse": 0.46877312411864597,
+            "relative_mse": 0.5647478703463399,
+            "signal_to_noise_db": 2.481453981208829
+          },
+          "conv3_block3_3_conv": {
+            "mse": 0.053919088198906846,
+            "relative_mse": 1.0306770147526272,
+            "signal_to_noise_db": -0.13122590902501502
+          },
+          "conv3_block4_1_conv": {
+            "mse": 2.157998436027103,
+            "relative_mse": 1.2020497786144895,
+            "signal_to_noise_db": -0.7992245279979487
+          },
+          "conv3_block4_2_conv": {
+            "mse": 1.2605601118670569,
+            "relative_mse": 1.3728015546082148,
+            "signal_to_noise_db": -1.376077623150811
+          },
+          "conv3_block4_3_conv": {
+            "mse": 0.13015910196635458,
+            "relative_mse": 1.0098831371448669,
+            "signal_to_noise_db": -0.04271120486056168
+          },
+          "conv4_block1_1_conv": {
+            "mse": 1.4180322057671018,
+            "relative_mse": 0.9499130144646664,
+            "signal_to_noise_db": 0.22316162150755614
+          },
+          "conv4_block1_2_conv": {
+            "mse": 1.3696324527263641,
+            "relative_mse": 0.6368238444102956,
+            "signal_to_noise_db": 1.9598068380376632
+          },
+          "conv4_block1_0_conv": {
+            "mse": 1.4371627204948,
+            "relative_mse": 1.1338468352380098,
+            "signal_to_noise_db": -0.5455439220807129
+          },
+          "conv4_block1_3_conv": {
+            "mse": 0.07139386340147919,
+            "relative_mse": 0.6886871755513124,
+            "signal_to_noise_db": 1.619780041921961
+          },
+          "conv4_block2_1_conv": {
+            "mse": 2.0923003951708474,
+            "relative_mse": 0.776967539092818,
+            "signal_to_noise_db": 1.0959712519825442
+          },
+          "conv4_block2_2_conv": {
+            "mse": 0.660830169916153,
+            "relative_mse": 0.9554708167658417,
+            "signal_to_noise_db": 0.19782573194119357
+          },
+          "conv4_block2_3_conv": {
+            "mse": 0.05452547284464041,
+            "relative_mse": 1.4571031045178386,
+            "signal_to_noise_db": -1.6349028350566954
+          },
+          "conv4_block3_1_conv": {
+            "mse": 1.7532400786876678,
+            "relative_mse": 1.0231737855908671,
+            "signal_to_noise_db": -0.09949404692768826
+          },
+          "conv4_block3_2_conv": {
+            "mse": 0.3191063611043824,
+            "relative_mse": 0.8451737692643391,
+            "signal_to_noise_db": 0.7305399013431303
+          },
+          "conv4_block3_3_conv": {
+            "mse": 0.060262374890347324,
+            "relative_mse": 1.3691515727640624,
+            "signal_to_noise_db": -1.3645152963229794
+          },
+          "conv4_block4_1_conv": {
+            "mse": 1.4290641612476773,
+            "relative_mse": 0.9060732720589586,
+            "signal_to_noise_db": 0.4283668050842214
+          },
+          "conv4_block4_2_conv": {
+            "mse": 0.24247673816151089,
+            "relative_mse": 0.6662867486876098,
+            "signal_to_noise_db": 1.7633882402599077
+          },
+          "conv4_block4_3_conv": {
+            "mse": 0.05020993699630102,
+            "relative_mse": 1.0305238504624852,
+            "signal_to_noise_db": -0.13058047550828877
+          },
+          "conv4_block5_1_conv": {
+            "mse": 1.8481615020169153,
+            "relative_mse": 1.4048766095339542,
+            "signal_to_noise_db": -1.4763818178432624
+          },
+          "conv4_block5_2_conv": {
+            "mse": 0.2778874635696411,
+            "relative_mse": 1.2317594349244123,
+            "signal_to_noise_db": -0.905258975310071
+          },
+          "conv4_block5_3_conv": {
+            "mse": 0.13790252432227135,
+            "relative_mse": 1.202491577336793,
+            "signal_to_noise_db": -0.8008204310910066
+          },
+          "conv4_block6_1_conv": {
+            "mse": 2.2147547668880887,
+            "relative_mse": 1.8144166446061163,
+            "signal_to_noise_db": -2.5873702124468725
+          },
+          "conv4_block6_2_conv": {
+            "mse": 0.5634522603617774,
+            "relative_mse": 1.7900269519916945,
+            "signal_to_noise_db": -2.5285957009338382
+          },
+          "conv4_block6_3_conv": {
+            "mse": 0.21278609625167316,
+            "relative_mse": 1.4132426839871486,
+            "signal_to_noise_db": -1.5021674590131604
+          },
+          "conv5_block1_1_conv": {
+            "mse": 2.2493040959040322,
+            "relative_mse": 1.493459520953818,
+            "signal_to_noise_db": -1.7419345588917212
+          },
+          "conv5_block1_2_conv": {
+            "mse": 0.6393888294696808,
+            "relative_mse": 0.9633100833642375,
+            "signal_to_noise_db": 0.16233893750450712
+          },
+          "conv5_block1_0_conv": {
+            "mse": 1.1335302690664928,
+            "relative_mse": 2.131073457660169,
+            "signal_to_noise_db": -3.2859842001294743
+          },
+          "conv5_block1_3_conv": {
+            "mse": 0.057663599132663675,
+            "relative_mse": 1.4359091013920329,
+            "signal_to_noise_db": -1.5712694825353604
+          },
+          "conv5_block2_1_conv": {
+            "mse": 9.625146733389961,
+            "relative_mse": 1.1482633086269256,
+            "signal_to_noise_db": -0.6004148768868993
+          },
+          "conv5_block2_2_conv": {
+            "mse": 0.24693965911865234,
+            "relative_mse": 0.6331892987266775,
+            "signal_to_noise_db": 1.9846643358104283
+          },
+          "conv5_block2_3_conv": {
+            "mse": 0.018642350358681545,
+            "relative_mse": 1.000410359868126,
+            "signal_to_noise_db": -0.0017818046976448099
+          },
+          "conv5_block3_1_conv": {
+            "mse": 8.504817777209812,
+            "relative_mse": 1.4603643391267975,
+            "signal_to_noise_db": -1.6446121929991395
+          },
+          "conv5_block3_2_conv": {
+            "mse": 0.25262297772698933,
+            "relative_mse": 0.8794669489414724,
+            "signal_to_noise_db": 0.5578047702749949
+          },
+          "conv5_block3_3_conv": {
+            "mse": 0.03375139387531413,
+            "relative_mse": 0.8845418398444724,
+            "signal_to_noise_db": 0.5328161964083681
+          },
+          "logits": {
+            "mse": 58.095000457763675,
+            "relative_mse": 0.2816700846674401,
+            "signal_to_noise_db": 5.502592756757626
+          }
+        },
+        "bottleneck_layers": [
+          "conv5_block1_0_conv",
+          "conv4_block6_1_conv",
+          "conv4_block6_2_conv",
+          "conv5_block1_1_conv",
+          "conv5_block3_1_conv"
+        ],
+        "interpretation": "Cumulative output error; includes all upstream quantization."
+      },
+      "2": {
+        "layer_errors": {
+          "conv1_conv": {
+            "mse": 10135.719835069445,
+            "relative_mse": 1.2414924825027893,
+            "signal_to_noise_db": -0.9394409415442455
+          },
+          "conv2_block1_1_conv": {
+            "mse": 8.429667631785074,
+            "relative_mse": 1.2833596502765652,
+            "signal_to_noise_db": -1.0834838064808943
+          },
+          "conv2_block1_2_conv": {
+            "mse": 5.98464650577969,
+            "relative_mse": 1.407824498994903,
+            "signal_to_noise_db": -1.4854851853573425
+          },
+          "conv2_block1_0_conv": {
+            "mse": 5.432728952831692,
+            "relative_mse": 1.504966652868174,
+            "signal_to_noise_db": -1.775268769160483
+          },
+          "conv2_block1_3_conv": {
+            "mse": 0.7142805523342557,
+            "relative_mse": 0.8633558876535365,
+            "signal_to_noise_db": 0.638101449756372
+          },
+          "conv2_block2_1_conv": {
+            "mse": 6.662579205301073,
+            "relative_mse": 4.668324629109396,
+            "signal_to_noise_db": -6.691610486862761
+          },
+          "conv2_block2_2_conv": {
+            "mse": 3.728805707560645,
+            "relative_mse": 3.8841364446337057,
+            "signal_to_noise_db": -5.892944777011264
+          },
+          "conv2_block2_3_conv": {
+            "mse": 0.5232486559285058,
+            "relative_mse": 3.555771478311568,
+            "signal_to_noise_db": -5.50933842034575
+          },
+          "conv2_block3_1_conv": {
+            "mse": 10.206484370761448,
+            "relative_mse": 5.665113412663685,
+            "signal_to_noise_db": -7.532086086391315
+          },
+          "conv2_block3_2_conv": {
+            "mse": 3.216948085361057,
+            "relative_mse": 4.865877973195096,
+            "signal_to_noise_db": -6.871612134660447
+          },
+          "conv2_block3_3_conv": {
+            "mse": 0.7418235672844781,
+            "relative_mse": 4.5594332363109995,
+            "signal_to_noise_db": -6.589108607257302
+          },
+          "conv3_block1_1_conv": {
+            "mse": 8.272583193249172,
+            "relative_mse": 5.7867608239037445,
+            "signal_to_noise_db": -7.624355326477367
+          },
+          "conv3_block1_2_conv": {
+            "mse": 5.325348761346605,
+            "relative_mse": 2.5726843795786305,
+            "signal_to_noise_db": -4.103865096401424
+          },
+          "conv3_block1_0_conv": {
+            "mse": 5.23898450533549,
+            "relative_mse": 4.477354381192132,
+            "signal_to_noise_db": -6.510214700156261
+          },
+          "conv3_block1_3_conv": {
+            "mse": 0.35316618118021226,
+            "relative_mse": 2.3900086262853595,
+            "signal_to_noise_db": -3.783994684549871
+          },
+          "conv3_block2_1_conv": {
+            "mse": 5.235653426912096,
+            "relative_mse": 2.834889502155298,
+            "signal_to_noise_db": -4.525361357017825
+          },
+          "conv3_block2_2_conv": {
+            "mse": 1.5755137734942966,
+            "relative_mse": 2.4822355350318457,
+            "signal_to_noise_db": -3.9484298856937396
+          },
+          "conv3_block2_3_conv": {
+            "mse": 0.20147490584188038,
+            "relative_mse": 3.670874786485122,
+            "signal_to_noise_db": -5.647695709747023
+          },
+          "conv3_block3_1_conv": {
+            "mse": 4.579203963279724,
+            "relative_mse": 2.5875072590859833,
+            "signal_to_noise_db": -4.1288157685205205
+          },
+          "conv3_block3_2_conv": {
+            "mse": 0.9372153249051836,
+            "relative_mse": 1.1290970654328565,
+            "signal_to_noise_db": -0.5273127865645243
+          },
+          "conv3_block3_3_conv": {
+            "mse": 0.09942805125481552,
+            "relative_mse": 1.9005923592762481,
+            "signal_to_noise_db": -2.788889789901152
+          },
+          "conv3_block4_1_conv": {
+            "mse": 9.2430297003852,
+            "relative_mse": 5.148558784653187,
+            "signal_to_noise_db": -7.116856757463021
+          },
+          "conv3_block4_2_conv": {
+            "mse": 8.292663468254936,
+            "relative_mse": 9.031049922880428,
+            "signal_to_noise_db": -9.557382430274792
+          },
+          "conv3_block4_3_conv": {
+            "mse": 0.7715923306014802,
+            "relative_mse": 5.986658417681506,
+            "signal_to_noise_db": -7.77184479199952
+          },
+          "conv4_block1_1_conv": {
+            "mse": 4.037128766377767,
+            "relative_mse": 2.7043963745360617,
+            "signal_to_noise_db": -4.32070345057292
+          },
+          "conv4_block1_2_conv": {
+            "mse": 2.8476561970180936,
+            "relative_mse": 1.3240452672788492,
+            "signal_to_noise_db": -1.2190283328596847
+          },
+          "conv4_block1_0_conv": {
+            "mse": 4.621329135364956,
+            "relative_mse": 3.6459889614467094,
+            "signal_to_noise_db": -5.618153494560833
+          },
+          "conv4_block1_3_conv": {
+            "mse": 0.14856742198268572,
+            "relative_mse": 1.4331270693228224,
+            "signal_to_noise_db": -1.5628469916155654
+          },
+          "conv4_block2_1_conv": {
+            "mse": 4.471862766477797,
+            "relative_mse": 1.6606086854690596,
+            "signal_to_noise_db": -2.2026730508031926
+          },
+          "conv4_block2_2_conv": {
+            "mse": 0.9141841994391547,
+            "relative_mse": 1.3217863885109606,
+            "signal_to_noise_db": -1.2116127528065321
+          },
+          "conv4_block2_3_conv": {
+            "mse": 0.037849633333583675,
+            "relative_mse": 1.011468866897643,
+            "signal_to_noise_db": -0.04952519689479104
+          },
+          "conv4_block3_1_conv": {
+            "mse": 4.978517903221978,
+            "relative_mse": 2.9054144218995988,
+            "signal_to_noise_db": -4.632080879509654
+          },
+          "conv4_block3_2_conv": {
+            "mse": 1.023197505209181,
+            "relative_mse": 2.7100045551791268,
+            "signal_to_noise_db": -4.329700208697918
+          },
+          "conv4_block3_3_conv": {
+            "mse": 0.09012912296586567,
+            "relative_mse": 2.0477193387266674,
+            "signal_to_noise_db": -3.1127043179840577
+          },
+          "conv4_block4_1_conv": {
+            "mse": 3.8729389905929565,
+            "relative_mse": 2.4555695950191083,
+            "signal_to_noise_db": -3.9015224728637747
+          },
+          "conv4_block4_2_conv": {
+            "mse": 0.6204779512352414,
+            "relative_mse": 1.7049727734522173,
+            "signal_to_noise_db": -2.3171744817668443
+          },
+          "conv4_block4_3_conv": {
+            "mse": 0.04932975163683295,
+            "relative_mse": 1.0124586613779707,
+            "signal_to_noise_db": -0.053773000329338315
+          },
+          "conv4_block5_1_conv": {
+            "mse": 4.524897005822924,
+            "relative_mse": 3.439592241854126,
+            "signal_to_noise_db": -5.3650696070845285
+          },
+          "conv4_block5_2_conv": {
+            "mse": 0.9632182584868537,
+            "relative_mse": 4.2695455294812446,
+            "signal_to_noise_db": -6.303816491367753
+          },
+          "conv4_block5_3_conv": {
+            "mse": 0.32839972318874466,
+            "relative_mse": 2.8636016858643063,
+            "signal_to_noise_db": -4.569126094244352
+          },
+          "conv4_block6_1_conv": {
+            "mse": 7.216261453098721,
+            "relative_mse": 5.911853126172068,
+            "signal_to_noise_db": -7.7172363592713555
+          },
+          "conv4_block6_2_conv": {
+            "mse": 4.748129606246948,
+            "relative_mse": 15.084294739140086,
+            "signal_to_noise_db": -11.785250097009367
+          },
+          "conv4_block6_3_conv": {
+            "mse": 2.1529055303997464,
+            "relative_mse": 14.298763141715321,
+            "signal_to_noise_db": -11.552984721531912
+          },
+          "conv5_block1_1_conv": {
+            "mse": 6.761386858092414,
+            "relative_mse": 4.489325207942433,
+            "signal_to_noise_db": -6.521810669519221
+          },
+          "conv5_block1_2_conv": {
+            "mse": 2.593066175778707,
+            "relative_mse": 3.906741373680536,
+            "signal_to_noise_db": -5.918146618771704
+          },
+          "conv5_block1_0_conv": {
+            "mse": 4.850903378592597,
+            "relative_mse": 9.119854773976325,
+            "signal_to_noise_db": -9.599879226088017
+          },
+          "conv5_block1_3_conv": {
+            "mse": 0.5290481150150299,
+            "relative_mse": 13.174082347455597,
+            "signal_to_noise_db": -11.19720373765719
+          },
+          "conv5_block2_1_conv": {
+            "mse": 118.58377032809787,
+            "relative_mse": 14.146838093806378,
+            "signal_to_noise_db": -11.50659383191762
+          },
+          "conv5_block2_2_conv": {
+            "mse": 14.81550497478909,
+            "relative_mse": 37.98911539260207,
+            "signal_to_noise_db": -15.79659180772817
+          },
+          "conv5_block2_3_conv": {
+            "mse": 1.6101521816518571,
+            "relative_mse": 86.40610719659841,
+            "signal_to_noise_db": -19.365444395627723
+          },
+          "conv5_block3_1_conv": {
+            "mse": 764.2316674126519,
+            "relative_mse": 131.22640639185974,
+            "signal_to_noise_db": -21.18021235926374
+          },
+          "conv5_block3_2_conv": {
+            "mse": 73.89239650302463,
+            "relative_mse": 257.2446936031256,
+            "signal_to_noise_db": -24.10346424979077
+          },
+          "conv5_block3_3_conv": {
+            "mse": 5.566914571656121,
+            "relative_mse": 145.89527400440966,
+            "signal_to_noise_db": -21.64041223990443
+          },
+          "logits": {
+            "mse": 123959.5015625,
+            "relative_mse": 601.0101217888363,
+            "signal_to_noise_db": -27.78881786145872
+          }
+        },
+        "bottleneck_layers": [
+          "logits",
+          "conv5_block3_2_conv",
+          "conv5_block3_3_conv",
+          "conv5_block3_1_conv",
+          "conv5_block2_3_conv"
+        ],
+        "interpretation": "Cumulative output error; includes all upstream quantization."
+      }
+    }
+  }
+}

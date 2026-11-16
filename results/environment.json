@@ -1,0 +1,44 @@
+{
+  "python": "3.10.13",
+  "tensorflow": "2.16.2",
+  "platform": "Linux-6.1.191-ext4fix-x86_64-with-glibc2.34",
+  "devices": [
+    "PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU')",
+    "PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')"
+  ],
+  "config": {
+    "seed": 42,
+    "batch_size": 64,
+    "baseline_epochs": 100,
+    "warmup_epochs": 5,
+    "finetune_epochs": 10,
+    "distill_epochs": 30,
+    "output_dir": ".",
+    "quick": false,
+    "sensitivity_samples": 256,
+    "calibration_samples": 1000,
+    "verbose": 2,
+    "imagenet_weights": true,
+    "image_size": 96,
+    "benchmark_repeats": 20,
+    "train_limit": null,
+    "val_limit": null,
+    "test_limit": null
+  },
+  "size_units": "MiB (2**20 bytes)",
+  "accuracy_units": "fraction; losses additionally in percentage points",
+  "data_source": "CIFAR-100",
+  "experiments": [
+    "pruning",
+    "quantization",
+    "distillation",
+    "interaction",
+    "nas"
+  ],
+  "consolidation": {
+    "full_run_job": "30015147",
+    "quantization_replacement_job": "30040324",
+    "note": "Part 2 rows replaced, other measured rows preserved. No measurements rerun locally.",
+    "artifact_paths": "relative to repository root"
+  }
+}

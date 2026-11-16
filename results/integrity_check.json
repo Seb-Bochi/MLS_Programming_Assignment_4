@@ -1,0 +1,20 @@
+{
+  "integrity_errors": [],
+  "checked_files_by_extension": {
+    ".keras": 69,
+    ".npz": 21,
+    ".tflite": 15,
+    ".h5": 37,
+    ".csv": 1,
+    ".json": 73,
+    ".png": 9,
+    ".xlsx": 1
+  },
+  "missing_model_references": [],
+  "workbook_matches_json": true,
+  "benchmark_rows": 76,
+  "missing_documents": [
+    "compression_analysis_report.pdf",
+    "interaction_analysis_summary.pdf"
+  ]
+}

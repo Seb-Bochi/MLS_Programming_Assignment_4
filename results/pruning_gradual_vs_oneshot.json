@@ -1,0 +1,1070 @@
+{
+  "gradual_pruning": {
+    "model": {
+      "model_name": "cifar100_resnet50",
+      "parameters": 23792612
+    },
+    "final_accuracy": 0.794,
+    "sparsity_achieved": 0.6999999830936234,
+    "layer_sparsity_analysis": {
+      "conv1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 9408,
+        "zero_weights": 3103,
+        "sparsity": 0.32982568027210885,
+        "dense_weight_bytes": 37632,
+        "gzip_weight_bytes": 26782
+      },
+      "conv2_block1_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 4096,
+        "zero_weights": 1684,
+        "sparsity": 0.4111328125,
+        "dense_weight_bytes": 16384,
+        "gzip_weight_bytes": 10542
+      },
+      "conv2_block1_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 36864,
+        "zero_weights": 21685,
+        "sparsity": 0.5882432725694444,
+        "dense_weight_bytes": 147456,
+        "gzip_weight_bytes": 71270
+      },
+      "conv2_block1_0_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 16384,
+        "zero_weights": 7965,
+        "sparsity": 0.48614501953125,
+        "dense_weight_bytes": 65536,
+        "gzip_weight_bytes": 37723
+      },
+      "conv2_block1_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 16384,
+        "zero_weights": 8343,
+        "sparsity": 0.50921630859375,
+        "dense_weight_bytes": 65536,
+        "gzip_weight_bytes": 36318
+      },
+      "conv2_block2_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 16384,
+        "zero_weights": 7690,
+        "sparsity": 0.4693603515625,
+        "dense_weight_bytes": 65536,
+        "gzip_weight_bytes": 38392
+      },
+      "conv2_block2_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 36864,
+        "zero_weights": 17857,
+        "sparsity": 0.4844021267361111,
+        "dense_weight_bytes": 147456,
+        "gzip_weight_bytes": 84535
+      },
+      "conv2_block2_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 16384,
+        "zero_weights": 7895,
+        "sparsity": 0.48187255859375,
+        "dense_weight_bytes": 65536,
+        "gzip_weight_bytes": 37972
+      },
+      "conv2_block3_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 16384,
+        "zero_weights": 7064,
+        "sparsity": 0.43115234375,
+        "dense_weight_bytes": 65536,
+        "gzip_weight_bytes": 40654
+      },
+      "conv2_block3_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 36864,
+        "zero_weights": 17105,
+        "sparsity": 0.4640028211805556,
+        "dense_weight_bytes": 147456,
+        "gzip_weight_bytes": 86848
+      },
+      "conv2_block3_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 16384,
+        "zero_weights": 8354,
+        "sparsity": 0.5098876953125,
+        "dense_weight_bytes": 65536,
+        "gzip_weight_bytes": 36477
+      },
+      "conv3_block1_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 32768,
+        "zero_weights": 16530,
+        "sparsity": 0.50445556640625,
+        "dense_weight_bytes": 131072,
+        "gzip_weight_bytes": 72962
+      },
+      "conv3_block1_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 147456,
+        "zero_weights": 87283,
+        "sparsity": 0.5919257269965278,
+        "dense_weight_bytes": 589824,
+        "gzip_weight_bytes": 280908
+      },
+      "conv3_block1_0_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 131072,
+        "zero_weights": 77390,
+        "sparsity": 0.5904388427734375,
+        "dense_weight_bytes": 524288,
+        "gzip_weight_bytes": 251705
+      },
+      "conv3_block1_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 65536,
+        "zero_weights": 34886,
+        "sparsity": 0.532318115234375,
+        "dense_weight_bytes": 262144,
+        "gzip_weight_bytes": 139539
+      },
+      "conv3_block2_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 65536,
+        "zero_weights": 37333,
+        "sparsity": 0.5696563720703125,
+        "dense_weight_bytes": 262144,
+        "gzip_weight_bytes": 130266
+      },
+      "conv3_block2_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 147456,
+        "zero_weights": 87369,
+        "sparsity": 0.5925089518229166,
+        "dense_weight_bytes": 589824,
+        "gzip_weight_bytes": 280490
+      },
+      "conv3_block2_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 65536,
+        "zero_weights": 38242,
+        "sparsity": 0.583526611328125,
+        "dense_weight_bytes": 262144,
+        "gzip_weight_bytes": 127610
+      },
+      "conv3_block3_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 65536,
+        "zero_weights": 45784,
+        "sparsity": 0.6986083984375,
+        "dense_weight_bytes": 262144,
+        "gzip_weight_bytes": 99208
+      },
+      "conv3_block3_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 147456,
+        "zero_weights": 103109,
+        "sparsity": 0.6992526584201388,
+        "dense_weight_bytes": 589824,
+        "gzip_weight_bytes": 222509
+      },
+      "conv3_block3_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 65536,
+        "zero_weights": 45803,
+        "sparsity": 0.6988983154296875,
+        "dense_weight_bytes": 262144,
+        "gzip_weight_bytes": 99810
+      },
+      "conv3_block4_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 65536,
+        "zero_weights": 31953,
+        "sparsity": 0.4875640869140625,
+        "dense_weight_bytes": 262144,
+        "gzip_weight_bytes": 149636
+      },
+      "conv3_block4_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 147456,
+        "zero_weights": 87181,
+        "sparsity": 0.5912339952256944,
+        "dense_weight_bytes": 589824,
+        "gzip_weight_bytes": 281541
+      },
+      "conv3_block4_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 65536,
+        "zero_weights": 37496,
+        "sparsity": 0.5721435546875,
+        "dense_weight_bytes": 262144,
+        "gzip_weight_bytes": 130133
+      },
+      "conv4_block1_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 131072,
+        "zero_weights": 83177,
+        "sparsity": 0.6345901489257812,
+        "dense_weight_bytes": 524288,
+        "gzip_weight_bytes": 229833
+      },
+      "conv4_block1_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 589824,
+        "zero_weights": 422875,
+        "sparsity": 0.7169511583116319,
+        "dense_weight_bytes": 2359296,
+        "gzip_weight_bytes": 849784
+      },
+      "conv4_block1_0_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 524288,
+        "zero_weights": 341665,
+        "sparsity": 0.6516742706298828,
+        "dense_weight_bytes": 2097152,
+        "gzip_weight_bytes": 885360
+      },
+      "conv4_block1_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 160022,
+        "sparsity": 0.6104354858398438,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 482742
+      },
+      "conv4_block2_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 189017,
+        "sparsity": 0.7210426330566406,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 373169
+      },
+      "conv4_block2_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 589824,
+        "zero_weights": 437606,
+        "sparsity": 0.7419264051649306,
+        "dense_weight_bytes": 2359296,
+        "gzip_weight_bytes": 792163
+      },
+      "conv4_block2_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 171729,
+        "sparsity": 0.6550941467285156,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 438768
+      },
+      "conv4_block3_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 172462,
+        "sparsity": 0.6578903198242188,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 435862
+      },
+      "conv4_block3_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 589824,
+        "zero_weights": 417284,
+        "sparsity": 0.7074720594618056,
+        "dense_weight_bytes": 2359296,
+        "gzip_weight_bytes": 868222
+      },
+      "conv4_block3_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 167240,
+        "sparsity": 0.637969970703125,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 455108
+      },
+      "conv4_block4_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 174607,
+        "sparsity": 0.6660728454589844,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 427491
+      },
+      "conv4_block4_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 589824,
+        "zero_weights": 415729,
+        "sparsity": 0.7048356797960069,
+        "dense_weight_bytes": 2359296,
+        "gzip_weight_bytes": 874359
+      },
+      "conv4_block4_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 175324,
+        "sparsity": 0.6688079833984375,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 425323
+      },
+      "conv4_block5_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 159084,
+        "sparsity": 0.6068572998046875,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 484752
+      },
+      "conv4_block5_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 589824,
+        "zero_weights": 417002,
+        "sparsity": 0.7069939507378472,
+        "dense_weight_bytes": 2359296,
+        "gzip_weight_bytes": 869415
+      },
+      "conv4_block5_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 167768,
+        "sparsity": 0.639984130859375,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 452828
+      },
+      "conv4_block6_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 153678,
+        "sparsity": 0.5862350463867188,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 504217
+      },
+      "conv4_block6_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 589824,
+        "zero_weights": 417800,
+        "sparsity": 0.7083468967013888,
+        "dense_weight_bytes": 2359296,
+        "gzip_weight_bytes": 865892
+      },
+      "conv4_block6_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 166562,
+        "sparsity": 0.6353836059570312,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 457407
+      },
+      "conv5_block1_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 524288,
+        "zero_weights": 330220,
+        "sparsity": 0.6298446655273438,
+        "dense_weight_bytes": 2097152,
+        "gzip_weight_bytes": 924423
+      },
+      "conv5_block1_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 2359296,
+        "zero_weights": 1762584,
+        "sparsity": 0.7470804850260416,
+        "dense_weight_bytes": 9437184,
+        "gzip_weight_bytes": 3109034
+      },
+      "conv5_block1_0_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 2097152,
+        "zero_weights": 1538714,
+        "sparsity": 0.7337160110473633,
+        "dense_weight_bytes": 8388608,
+        "gzip_weight_bytes": 2877526
+      },
+      "conv5_block1_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 1048576,
+        "zero_weights": 696389,
+        "sparsity": 0.664128303527832,
+        "dense_weight_bytes": 4194304,
+        "gzip_weight_bytes": 1714895
+      },
+      "conv5_block2_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 1048576,
+        "zero_weights": 732528,
+        "sparsity": 0.6985931396484375,
+        "dense_weight_bytes": 4194304,
+        "gzip_weight_bytes": 1576880
+      },
+      "conv5_block2_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 2359296,
+        "zero_weights": 1806014,
+        "sparsity": 0.765488518608941,
+        "dense_weight_bytes": 9437184,
+        "gzip_weight_bytes": 2935721
+      },
+      "conv5_block2_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 1048576,
+        "zero_weights": 746542,
+        "sparsity": 0.7119579315185547,
+        "dense_weight_bytes": 4194304,
+        "gzip_weight_bytes": 1526316
+      },
+      "conv5_block3_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 1048576,
+        "zero_weights": 665328,
+        "sparsity": 0.6345062255859375,
+        "dense_weight_bytes": 4194304,
+        "gzip_weight_bytes": 1829222
+      },
+      "conv5_block3_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 2359296,
+        "zero_weights": 1834255,
+        "sparsity": 0.7774586147732205,
+        "dense_weight_bytes": 9437184,
+        "gzip_weight_bytes": 2823968
+      },
+      "conv5_block3_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 1048576,
+        "zero_weights": 735509,
+        "sparsity": 0.7014360427856445,
+        "dense_weight_bytes": 4194304,
+        "gzip_weight_bytes": 1567043
+      },
+      "logits/kernel": {
+        "layer_type": "Dense",
+        "weights": 204800,
+        "zero_weights": 63980,
+        "sparsity": 0.31240234375,
+        "dense_weight_bytes": 819200,
+        "gzip_weight_bytes": 579633
+      }
+    },
+    "training_history": {
+      "loss": [
+        0.1864020824432373,
+        0.1694500744342804,
+        0.15706340968608856,
+        0.1477699726819992,
+        0.1373407393693924,
+        0.14730332791805267,
+        0.14802074432373047,
+        0.14736682176589966,
+        0.12609760463237762,
+        0.13264885544776917
+      ],
+      "accuracy": [
+        0.9536888599395752,
+        0.9589555263519287,
+        0.962755560874939,
+        0.9661333560943604,
+        0.9693111181259155,
+        0.9658666849136353,
+        0.9655555486679077,
+        0.9658889174461365,
+        0.9738888740539551,
+        0.970644474029541
+      ],
+      "val_loss": [
+        1.1063529253005981,
+        1.1705858707427979,
+        1.0905115604400635,
+        1.0285881757736206,
+        1.0822176933288574,
+        1.0516432523727417,
+        1.0293978452682495,
+        0.9403074383735657,
+        0.9308218955993652,
+        0.9330679774284363
+      ],
+      "val_accuracy": [
+        0.7545999884605408,
+        0.751800000667572,
+        0.7685999870300293,
+        0.7710000276565552,
+        0.7724000215530396,
+        0.777400016784668,
+        0.7814000248908997,
+        0.7982000112533569,
+        0.7983999848365784,
+        0.7940000295639038
+      ],
+      "lr": [
+        9.999999747378752e-05,
+        9.999999747378752e-05,
+        9.999999747378752e-05,
+        9.999999747378752e-05,
+        9.999999747378752e-05,
+        9.999999747378752e-05,
+        9.999999747378752e-05,
+        4.999999873689376e-05,
+        4.999999873689376e-05,
+        4.999999873689376e-05
+      ],
+      "scheduled_sparsity": [
+        0.0,
+        0.07777777777777777,
+        0.15555555555555553,
+        0.2333333333333333,
+        0.31111111111111106,
+        0.3888888888888889,
+        0.4666666666666666,
+        0.5444444444444444,
+        0.6222222222222221,
+        0.7
+      ]
+    },
+    "training_time_seconds": 1362.8550486780005,
+    "model_path": "compressed_models/gradual_pruning.keras",
+    "evaluation_split": "validation",
+    "storage_note": "Dense Keras storage; gzip_weight_bytes is compressed kernel payload only."
+  },
+  "oneshot_pruning": {
+    "model": {
+      "model_name": "cifar100_resnet50",
+      "parameters": 23792612
+    },
+    "final_accuracy": 0.8022,
+    "sparsity_achieved": 0.6999999830936234,
+    "layer_sparsity_analysis": {
+      "conv1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 9408,
+        "zero_weights": 2962,
+        "sparsity": 0.3148384353741497,
+        "dense_weight_bytes": 37632,
+        "gzip_weight_bytes": 27236
+      },
+      "conv2_block1_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 4096,
+        "zero_weights": 1599,
+        "sparsity": 0.390380859375,
+        "dense_weight_bytes": 16384,
+        "gzip_weight_bytes": 10843
+      },
+      "conv2_block1_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 36864,
+        "zero_weights": 21146,
+        "sparsity": 0.5736219618055556,
+        "dense_weight_bytes": 147456,
+        "gzip_weight_bytes": 73390
+      },
+      "conv2_block1_0_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 16384,
+        "zero_weights": 7770,
+        "sparsity": 0.4742431640625,
+        "dense_weight_bytes": 65536,
+        "gzip_weight_bytes": 38495
+      },
+      "conv2_block1_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 16384,
+        "zero_weights": 8034,
+        "sparsity": 0.4903564453125,
+        "dense_weight_bytes": 65536,
+        "gzip_weight_bytes": 37503
+      },
+      "conv2_block2_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 16384,
+        "zero_weights": 7406,
+        "sparsity": 0.4520263671875,
+        "dense_weight_bytes": 65536,
+        "gzip_weight_bytes": 39407
+      },
+      "conv2_block2_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 36864,
+        "zero_weights": 16930,
+        "sparsity": 0.4592556423611111,
+        "dense_weight_bytes": 147456,
+        "gzip_weight_bytes": 87891
+      },
+      "conv2_block2_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 16384,
+        "zero_weights": 7643,
+        "sparsity": 0.46649169921875,
+        "dense_weight_bytes": 65536,
+        "gzip_weight_bytes": 38983
+      },
+      "conv2_block3_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 16384,
+        "zero_weights": 6673,
+        "sparsity": 0.40728759765625,
+        "dense_weight_bytes": 65536,
+        "gzip_weight_bytes": 41991
+      },
+      "conv2_block3_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 36864,
+        "zero_weights": 16224,
+        "sparsity": 0.4401041666666667,
+        "dense_weight_bytes": 147456,
+        "gzip_weight_bytes": 90071
+      },
+      "conv2_block3_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 16384,
+        "zero_weights": 8230,
+        "sparsity": 0.5023193359375,
+        "dense_weight_bytes": 65536,
+        "gzip_weight_bytes": 36954
+      },
+      "conv3_block1_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 32768,
+        "zero_weights": 15744,
+        "sparsity": 0.48046875,
+        "dense_weight_bytes": 131072,
+        "gzip_weight_bytes": 75856
+      },
+      "conv3_block1_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 147456,
+        "zero_weights": 84804,
+        "sparsity": 0.5751139322916666,
+        "dense_weight_bytes": 589824,
+        "gzip_weight_bytes": 291435
+      },
+      "conv3_block1_0_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 131072,
+        "zero_weights": 75047,
+        "sparsity": 0.5725631713867188,
+        "dense_weight_bytes": 524288,
+        "gzip_weight_bytes": 261210
+      },
+      "conv3_block1_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 65536,
+        "zero_weights": 33774,
+        "sparsity": 0.515350341796875,
+        "dense_weight_bytes": 262144,
+        "gzip_weight_bytes": 143826
+      },
+      "conv3_block2_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 65536,
+        "zero_weights": 36008,
+        "sparsity": 0.5494384765625,
+        "dense_weight_bytes": 262144,
+        "gzip_weight_bytes": 135514
+      },
+      "conv3_block2_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 147456,
+        "zero_weights": 84416,
+        "sparsity": 0.5724826388888888,
+        "dense_weight_bytes": 589824,
+        "gzip_weight_bytes": 292435
+      },
+      "conv3_block2_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 65536,
+        "zero_weights": 37433,
+        "sparsity": 0.5711822509765625,
+        "dense_weight_bytes": 262144,
+        "gzip_weight_bytes": 131132
+      },
+      "conv3_block3_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 65536,
+        "zero_weights": 45392,
+        "sparsity": 0.692626953125,
+        "dense_weight_bytes": 262144,
+        "gzip_weight_bytes": 101313
+      },
+      "conv3_block3_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 147456,
+        "zero_weights": 102344,
+        "sparsity": 0.6940646701388888,
+        "dense_weight_bytes": 589824,
+        "gzip_weight_bytes": 226663
+      },
+      "conv3_block3_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 65536,
+        "zero_weights": 45644,
+        "sparsity": 0.69647216796875,
+        "dense_weight_bytes": 262144,
+        "gzip_weight_bytes": 101045
+      },
+      "conv3_block4_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 65536,
+        "zero_weights": 30290,
+        "sparsity": 0.462188720703125,
+        "dense_weight_bytes": 262144,
+        "gzip_weight_bytes": 155735
+      },
+      "conv3_block4_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 147456,
+        "zero_weights": 84379,
+        "sparsity": 0.5722317165798612,
+        "dense_weight_bytes": 589824,
+        "gzip_weight_bytes": 293092
+      },
+      "conv3_block4_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 65536,
+        "zero_weights": 36441,
+        "sparsity": 0.5560455322265625,
+        "dense_weight_bytes": 262144,
+        "gzip_weight_bytes": 134514
+      },
+      "conv4_block1_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 131072,
+        "zero_weights": 81057,
+        "sparsity": 0.6184158325195312,
+        "dense_weight_bytes": 524288,
+        "gzip_weight_bytes": 238963
+      },
+      "conv4_block1_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 589824,
+        "zero_weights": 422973,
+        "sparsity": 0.7171173095703125,
+        "dense_weight_bytes": 2359296,
+        "gzip_weight_bytes": 856158
+      },
+      "conv4_block1_0_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 524288,
+        "zero_weights": 335979,
+        "sparsity": 0.6408290863037109,
+        "dense_weight_bytes": 2097152,
+        "gzip_weight_bytes": 912393
+      },
+      "conv4_block1_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 155824,
+        "sparsity": 0.59442138671875,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 500741
+      },
+      "conv4_block2_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 188770,
+        "sparsity": 0.7201004028320312,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 376921
+      },
+      "conv4_block2_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 589824,
+        "zero_weights": 441234,
+        "sparsity": 0.748077392578125,
+        "dense_weight_bytes": 2359296,
+        "gzip_weight_bytes": 785243
+      },
+      "conv4_block2_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 169288,
+        "sparsity": 0.645782470703125,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 451106
+      },
+      "conv4_block3_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 169322,
+        "sparsity": 0.6459121704101562,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 450877
+      },
+      "conv4_block3_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 589824,
+        "zero_weights": 417309,
+        "sparsity": 0.7075144449869791,
+        "dense_weight_bytes": 2359296,
+        "gzip_weight_bytes": 875788
+      },
+      "conv4_block3_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 164279,
+        "sparsity": 0.6266746520996094,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 468896
+      },
+      "conv4_block4_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 172202,
+        "sparsity": 0.6568984985351562,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 439591
+      },
+      "conv4_block4_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 589824,
+        "zero_weights": 416258,
+        "sparsity": 0.7057325575086806,
+        "dense_weight_bytes": 2359296,
+        "gzip_weight_bytes": 880221
+      },
+      "conv4_block4_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 173812,
+        "sparsity": 0.6630401611328125,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 434262
+      },
+      "conv4_block5_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 154584,
+        "sparsity": 0.589691162109375,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 504203
+      },
+      "conv4_block5_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 589824,
+        "zero_weights": 416590,
+        "sparsity": 0.7062954372829862,
+        "dense_weight_bytes": 2359296,
+        "gzip_weight_bytes": 878362
+      },
+      "conv4_block5_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 165461,
+        "sparsity": 0.6311836242675781,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 464333
+      },
+      "conv4_block6_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 148206,
+        "sparsity": 0.5653610229492188,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 526653
+      },
+      "conv4_block6_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 589824,
+        "zero_weights": 418025,
+        "sparsity": 0.7087283664279513,
+        "dense_weight_bytes": 2359296,
+        "gzip_weight_bytes": 872362
+      },
+      "conv4_block6_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 262144,
+        "zero_weights": 163719,
+        "sparsity": 0.6245384216308594,
+        "dense_weight_bytes": 1048576,
+        "gzip_weight_bytes": 470579
+      },
+      "conv5_block1_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 524288,
+        "zero_weights": 322255,
+        "sparsity": 0.6146526336669922,
+        "dense_weight_bytes": 2097152,
+        "gzip_weight_bytes": 960048
+      },
+      "conv5_block1_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 2359296,
+        "zero_weights": 1782381,
+        "sparsity": 0.7554715474446615,
+        "dense_weight_bytes": 9437184,
+        "gzip_weight_bytes": 3062040
+      },
+      "conv5_block1_0_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 2097152,
+        "zero_weights": 1548396,
+        "sparsity": 0.7383327484130859,
+        "dense_weight_bytes": 8388608,
+        "gzip_weight_bytes": 2865698
+      },
+      "conv5_block1_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 1048576,
+        "zero_weights": 687711,
+        "sparsity": 0.6558523178100586,
+        "dense_weight_bytes": 4194304,
+        "gzip_weight_bytes": 1761167
+      },
+      "conv5_block2_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 1048576,
+        "zero_weights": 728069,
+        "sparsity": 0.694340705871582,
+        "dense_weight_bytes": 4194304,
+        "gzip_weight_bytes": 1607495
+      },
+      "conv5_block2_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 2359296,
+        "zero_weights": 1836764,
+        "sparsity": 0.7785220675998263,
+        "dense_weight_bytes": 9437184,
+        "gzip_weight_bytes": 2845017
+      },
+      "conv5_block2_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 1048576,
+        "zero_weights": 748674,
+        "sparsity": 0.7139911651611328,
+        "dense_weight_bytes": 4194304,
+        "gzip_weight_bytes": 1532504
+      },
+      "conv5_block3_1_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 1048576,
+        "zero_weights": 649829,
+        "sparsity": 0.619725227355957,
+        "dense_weight_bytes": 4194304,
+        "gzip_weight_bytes": 1898290
+      },
+      "conv5_block3_2_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 2359296,
+        "zero_weights": 1873604,
+        "sparsity": 0.7941368950737847,
+        "dense_weight_bytes": 9437184,
+        "gzip_weight_bytes": 2695465
+      },
+      "conv5_block3_3_conv/kernel": {
+        "layer_type": "Conv2D",
+        "weights": 1048576,
+        "zero_weights": 736847,
+        "sparsity": 0.7027120590209961,
+        "dense_weight_bytes": 4194304,
+        "gzip_weight_bytes": 1576781
+      },
+      "logits/kernel": {
+        "layer_type": "Dense",
+        "weights": 204800,
+        "zero_weights": 56043,
+        "sparsity": 0.2736474609375,
+        "dense_weight_bytes": 819200,
+        "gzip_weight_bytes": 605641
+      }
+    },
+    "training_history": {
+      "loss": [
+        0.13805873692035675,
+        0.12468169629573822,
+        0.11263126134872437,
+        0.11026305705308914,
+        0.08637675642967224,
+        0.08470073342323303,
+        0.0759592056274414,
+        0.0825679823756218,
+        0.07040176540613174,
+        0.06788008660078049
+      ],
+      "accuracy": [
+        0.9715777635574341,
+        0.975088894367218,
+        0.9790666699409485,
+        0.979200005531311,
+        0.9874222278594971,
+        0.9875777959823608,
+        0.9901555776596069,
+        0.9881777763366699,
+        0.9918000102043152,
+        0.9928666949272156
+      ],
+      "val_loss": [
+        1.0189746618270874,
+        1.044952630996704,
+        1.026374340057373,
+        1.043688178062439,
+        0.9526335000991821,
+        0.9962661266326904,
+        0.9705756902694702,
+        0.973598837852478,
+        0.9484899640083313,
+        0.9610593914985657
+      ],
+      "val_accuracy": [
+        0.7784000039100647,
+        0.7757999897003174,
+        0.782800018787384,
+        0.7807999849319458,
+        0.8026000261306763,
+        0.79339998960495,
+        0.7986000180244446,
+        0.7950000166893005,
+        0.8068000078201294,
+        0.8022000193595886
+      ],
+      "lr": [
+        9.999999747378752e-05,
+        9.999999747378752e-05,
+        9.999999747378752e-05,
+        9.999999747378752e-05,
+        4.999999873689376e-05,
+        4.999999873689376e-05,
+        4.999999873689376e-05,
+        4.999999873689376e-05,
+        2.499999936844688e-05,
+        2.499999936844688e-05
+      ],
+      "scheduled_sparsity": [
+        0.7,
+        0.7,
+        0.7,
+        0.7,
+        0.7,
+        0.7,
+        0.7,
+        0.7,
+        0.7,
+        0.7
+      ]
+    },
+    "training_time_seconds": 1132.6981930070324,
+    "model_path": "compressed_models/oneshot_pruning.keras",
+    "evaluation_split": "validation",
+    "storage_note": "Dense Keras storage; gzip_weight_bytes is compressed kernel payload only."
+  },
+  "convergence_analysis": {
+    "gradual": {
+      "epochs_run": 10,
+      "best_validation_epoch": 9,
+      "validation_loss_step_std": 0.050961602785930565,
+      "validation_loss_increases": 3,
+      "training_time_seconds": 1362.8550486780005
+    },
+    "oneshot": {
+      "epochs_run": 10,
+      "best_validation_epoch": 9,
+      "validation_loss_step_std": 0.03741573455547713,
+      "validation_loss_increases": 5,
+      "training_time_seconds": 1132.6981930070324
+    }
+  },
+  "stability_metrics": {
+    "gradual": {
+      "validation_loss_step_std": 0.050961602785930565,
+      "validation_loss_increases": 3
+    },
+    "oneshot": {
+      "validation_loss_step_std": 0.03741573455547713,
+      "validation_loss_increases": 5
+    }
+  },
+  "accuracy_difference": -0.008199999999999985,
+  "time_overhead_seconds": 230.15685567096807
+}

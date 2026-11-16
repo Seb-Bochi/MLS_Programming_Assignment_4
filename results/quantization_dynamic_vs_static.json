@@ -1,0 +1,30 @@
+{
+  "float32": {
+    "tflite_path": "compressed_models/quant_float32.tflite",
+    "artifact_bytes": 94782244,
+    "validation_accuracy": 0.8182,
+    "conversion_seconds": 21.908288732985966,
+    "end_to_end_ms_per_sample": 34.55314720838796,
+    "calibration_samples": 0,
+    "timing_includes_interpreter_setup": true
+  },
+  "dynamic": {
+    "tflite_path": "compressed_models/quant_dynamic.tflite",
+    "artifact_bytes": 24123000,
+    "validation_accuracy": 0.8156,
+    "conversion_seconds": 25.299042825005017,
+    "end_to_end_ms_per_sample": 26.249447195418178,
+    "calibration_samples": 0,
+    "timing_includes_interpreter_setup": true
+  },
+  "int8": {
+    "tflite_path": "compressed_models/quant_int8.tflite",
+    "artifact_bytes": 24445752,
+    "validation_accuracy": 0.8162,
+    "conversion_seconds": 83.21990758506581,
+    "end_to_end_ms_per_sample": 7.976414981414564,
+    "calibration_samples": 1000,
+    "timing_includes_interpreter_setup": true
+  },
+  "tradeoffs": "Dynamic-range quantization calibrates no representative activation ranges; supported kernels quantize activations at inference. Full INT8 fixes activation ranges using calibration. Inspect measured accuracy and target-device latency."
+}

@@ -5,6 +5,42 @@ result dictionaries and six-step execution flow. The requested code is split int
 listed deliverable files. Small shared utilities live in `common.py`; `main.py` runs
 the pipeline. `neural_architecture_search.py` supplies the architecture search named in
 the objective but missing from the skeleton. No LaTeX or PDF reports are generated.
+See `DELIVERABLES_CHECKLIST.md` for the current submission audit and remaining gaps.
+
+## Consolidated DTU results
+
+The repository-root model files, benchmark table and figures combine the full DTU
+job **30015147** with the corrected Part 2 job **30040324**. Quantization results
+come from the second job; pruning, distillation, interactions and NAS retain their
+original measurements. Summaries and plots are regenerated from those records;
+assembly does not retrain models or rerun measurements.
+
+`results/baseline_training.json` records **80.83% test accuracy**, exceeding the
+75% baseline requirement. The original benchmark measures 80.81%; these are separate
+evaluations of the baseline. **No measured model satisfies both at least 10x size
+reduction and less than five percentage points of accuracy loss.** The best test
+accuracy among executable artifacts above 10x reduction is 55.35% (the 180.43x NAS
+student). Corrected QAT INT8 TFLite reaches 81.06% test accuracy at 3.92x reduction.
+The corrected binary experiment completes but reaches only 1.64% validation accuracy.
+These results must not be represented as meeting the combined compression target.
+
+Active JSON artifact paths are relative to this repository. Exact duplicate Keras
+exports share a canonical file, with aliases recorded in
+`results/artifact_aliases.json`; all distinct model variants are retained.
+Original benchmarks, configurations, package versions and scheduler logs remain in
+`results/provenance/`, where original HPC paths are preserved as provenance.
+
+`scripts/assemble_deliverables.py` reconstructs the consolidated artifacts from the
+two downloaded folders `outputs/dtu_30015147/` and `outputs/dtu_part2_fixed/`, plus
+`outputs/hpc_logs/`. It regenerates plots and tabular summaries without training.
+Use it only in a clean destination with those downloads available; it refuses to
+overwrite an already assembled `baseline_model.keras`. The submission's
+`performance_benchmarks.xlsx` contains the consolidated benchmark records.
+
+The two required PDFs, `compression_analysis_report.pdf` and
+`interaction_analysis_summary.pdf`, are still missing under the earlier instruction
+not to create reports. Multiple-seed evaluation is implemented but has no saved
+full-data experimental results; the downloaded runs use seed 42.
 
 ## Setup
 
@@ -54,17 +90,16 @@ separately when memory is limited.
 # One epoch on a stratified CIFAR-100 subset; tests wiring, not accuracy targets.
 .\.venv\Scripts\python.exe main.py --quick
 
-# Full baseline, core compression comparisons, interactions and architecture search.
-.\.venv\Scripts\python.exe main.py
+# Full baseline, core comparisons, interactions and architecture search in a fresh directory.
+.\.venv\Scripts\python.exe main.py --output-dir outputs/new_full
 
 # Also run sensitivity, lottery tickets, dynamic quantization, feature/ensemble KD,
 # all six technique orders, and corruption/calibration evaluation.
-.\.venv\Scripts\python.exe main.py --extended
+.\.venv\Scripts\python.exe main.py --extended --output-dir outputs/new_extended
 
 # Train the baseline separately, then reuse it in subsequent commands.
-.\.venv\Scripts\python.exe main.py --baseline-only
-.\.venv\Scripts\python.exe main.py --parts pruning quantization
-.\.venv\Scripts\python.exe main.py --parts distillation interaction nas
+.\.venv\Scripts\python.exe main.py --baseline-only --output-dir outputs/new_pruning_quantization
+.\.venv\Scripts\python.exe main.py --parts pruning quantization --output-dir outputs/new_pruning_quantization
 ```
 
 Useful controls: `--output-dir`, `--seed`, `--batch-size`, `--baseline-epochs`,
@@ -79,8 +114,8 @@ do not merge old results. `--quick` writes to `outputs/quick`; `--smoke` writes 
 ## DTU HPC submission
 
 Copy the Python files, `requirements.txt`, `setup_dtu_hpc.sh` and `run_dtu_hpc.sh`
-to a project directory on DTU. Do not copy the Windows `.venv`, `scripts/node_modules`,
-or synthetic `outputs/` directory. Use shared storage with enough space for the
+to a project directory on DTU. Do not copy the Windows `.venv` or synthetic
+`outputs/` directory. Use shared storage with enough space for the
 Linux environment and many saved model variants.
 
 From that project directory on DTU:
@@ -117,6 +152,8 @@ MODE=all bsub < run_dtu_hpc.sh
 
 Optional exported settings: `BATCH_SIZE`, `BASELINE_EPOCHS`, `FINETUNE_EPOCHS`,
 `DISTILL_EPOCHS`, `SEED`, and `EXTENDED=0` to omit the additional comparisons.
+`PARTS=quantization` selects Part 2; `BASELINE_SOURCE` can point to a previously
+trained `baseline_model.keras` to copy into a fresh `OUTPUT_DIR`.
 Use the same seed/configuration when reusing a baseline. Do not run two jobs into
 the same output directory. A 24-hour allocation is a limit, not a guarantee that
 the complete experiment suite finishes. Completed files persist if the job times
@@ -221,25 +258,17 @@ Individual methods generate additional sensitivity, temperature and Pareto plots
 Figures requiring omitted experiment families are omitted. No technical report,
 interaction-summary PDF or `.tex` file is produced.
 
-**Accuracy targets are goals, not prefilled results.** The source implementation and
-synthetic execution checks do not establish >75% CIFAR-100 baseline accuracy or the
-10×/<5-point target. Train to convergence, inspect `results/baseline_training.json`,
-and assess the measured final benchmark table. If the baseline misses its target,
-adjust training duration and hyperparameters using validation data before drawing
-compression conclusions. Synthetic and one-epoch results are not submission-quality
-model evidence.
+The root artifacts now contain real CIFAR-100 measurements. The baseline accuracy
+target is met; the combined 10x/<5-point target remains unmet. Synthetic and
+one-epoch runs are execution checks and must be kept separate from this evidence.
 
 ## Validation
 
-The offline test suite currently contains 41 passing numerical and behavioral
+The last completed offline test run contains 43 passing numerical and behavioral
 checks. It covers data-split isolation, baseline graph construction, exact pruning
 masks, residual-safe channel surgery, custom quantization gradients and serialization,
 integer TFLite execution, unchanged teacher weights, feature-adapter updates,
 benchmark arithmetic, Pareto ties, and scenario constraints. These tests do not train
-CIFAR-100 to the accuracy target.
-
-`python scripts/verify_extended.py` runs the advanced methods on the saved synthetic
-smoke baseline, writing to `outputs/extended_smoke`. It resumes methods whose result
-JSON is already present. Remove only the desired result JSON to deliberately repeat
-a check. `scripts/run_logged.py` captures Python
-warnings in a log without PowerShell interpreting them as failed commands.
+CIFAR-100 to the accuracy target. The binary regression tests cover latent-weight
+clipping and rejection of non-finite quantized kernels during archive packing.
+The completed DTU jobs provide the separate full-data experiment evidence.

@@ -1,0 +1,10 @@
+{
+  "benchmark_rows": 76,
+  "model_files_kept": 143,
+  "duplicate_model_aliases": 85,
+  "target_passing_models": [],
+  "missing_documents": [
+    "compression_analysis_report.pdf",
+    "interaction_analysis_summary.pdf"
+  ]
+}

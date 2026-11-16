@@ -1,0 +1,889 @@
+{
+  "mobile_deployment": {
+    "priority_metrics": [
+      "model_size",
+      "inference_latency"
+    ],
+    "recommended_techniques": [
+      "compact student distillation",
+      "structured channel pruning",
+      "native INT8 PTQ or QAT"
+    ],
+    "technique_ordering": [
+      "choose student architecture",
+      "distill/fine-tune",
+      "structured prune if needed",
+      "fine-tune",
+      "calibrate and quantize",
+      "validate on device"
+    ],
+    "expected_trade_offs": {
+      "accuracy": "Select temperature, width and pruning strength on validation data; use QAT if INT8 PTQ loses too much accuracy.",
+      "size": "Report actual exported bytes. Packed INT4/binary weights are storage experiments unless a compatible execution backend is supplied.",
+      "latency": "Native operator/delegate support and activation traffic determine gains; sparse weights alone do not reduce dense-kernel work.",
+      "battery": "Measure device energy and duty cycle before estimating battery impact."
+    },
+    "measured_selection": {
+      "model_name": null,
+      "metrics": {},
+      "feasible_candidates": [],
+      "rejected_candidates": {
+        "baseline": [
+          "model_size_mb=91.31 exceeds 10"
+        ],
+        "pruning_magnitude_pruning_model": [
+          "model_size_mb=91.31 exceeds 10"
+        ],
+        "pruning_structured_pruning_model": [
+          "model_size_mb=41.01 exceeds 10"
+        ],
+        "pruning_gradual_vs_oneshot_gradual_pruning_model": [
+          "model_size_mb=91.31 exceeds 10"
+        ],
+        "pruning_gradual_vs_oneshot_oneshot_pruning_model": [
+          "model_size_mb=91.31 exceeds 10"
+        ],
+        "pruning_lottery_ticket_model": [
+          "model_size_mb=91.31 exceeds 10"
+        ],
+        "pruning_lottery_ticket_random_initialization_control_model": [
+          "model_size_mb=91.31 exceeds 10",
+          "accuracy_loss_percent=12.96 exceeds 5"
+        ],
+        "quantization_mixed_bit_mixed_bit_models_uniform_2_model": [
+          "model_size_mb=91.32 exceeds 10",
+          "accuracy_loss_percent=79.82 exceeds 5"
+        ],
+        "quantization_mixed_bit_mixed_bit_models_uniform_4_model": [
+          "model_size_mb=91.32 exceeds 10",
+          "accuracy_loss_percent=71.28 exceeds 5"
+        ],
+        "quantization_mixed_bit_mixed_bit_models_uniform_8_model": [
+          "model_size_mb=91.32 exceeds 10"
+        ],
+        "quantization_mixed_bit_mixed_bit_models_mixed_model": [
+          "model_size_mb=91.32 exceeds 10",
+          "accuracy_loss_percent=78.61 exceeds 5"
+        ],
+        "quantization_ptq_vs_qat_ptq_results_8_model": [
+          "model_size_mb=91.32 exceeds 10"
+        ],
+        "quantization_ptq_vs_qat_ptq_results_8_tflite_path": [
+          "model_size_mb=23.31 exceeds 10"
+        ],
+        "quantization_ptq_vs_qat_ptq_results_4_model": [
+          "model_size_mb=91.32 exceeds 10",
+          "accuracy_loss_percent=71.28 exceeds 5"
+        ],
+        "quantization_ptq_vs_qat_qat_results_8_model": [
+          "model_size_mb=91.32 exceeds 10"
+        ],
+        "quantization_ptq_vs_qat_qat_results_8_tflite_path": [
+          "model_size_mb=23.31 exceeds 10"
+        ],
+        "quantization_ptq_vs_qat_qat_results_4_model": [
+          "model_size_mb=91.32 exceeds 10",
+          "accuracy_loss_percent=13.4 exceeds 5"
+        ],
+        "quantization_extreme_quantization_int4_quantization_model": [
+          "model_size_mb=91.32 exceeds 10",
+          "accuracy_loss_percent=13.47 exceeds 5"
+        ],
+        "quantization_extreme_quantization_binary_quantization_model": [
+          "model_size_mb=91.32 exceeds 10",
+          "accuracy_loss_percent=78.98 exceeds 5"
+        ],
+        "quantization_dynamic_vs_static_float32_tflite_path": [
+          "model_size_mb=90.39 exceeds 10",
+          "single_inference_ms=35.02 exceeds 33"
+        ],
+        "quantization_dynamic_vs_static_dynamic_tflite_path": [
+          "model_size_mb=23.01 exceeds 10"
+        ],
+        "quantization_dynamic_vs_static_int8_tflite_path": [
+          "model_size_mb=23.31 exceeds 10"
+        ],
+        "distillation_temperature_optimization_trials_1_model": [
+          "accuracy_loss_percent=47.38 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_3.11111_model": [
+          "accuracy_loss_percent=50.98 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_5.22222_model": [
+          "accuracy_loss_percent=48.32 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_7.33333_model": [
+          "accuracy_loss_percent=49.19 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_9.44444_model": [
+          "accuracy_loss_percent=49.43 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_11.5556_model": [
+          "accuracy_loss_percent=49.89 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_13.6667_model": [
+          "accuracy_loss_percent=47.14 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_15.7778_model": [
+          "accuracy_loss_percent=48.67 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_17.8889_model": [
+          "accuracy_loss_percent=49.62 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_20_model": [
+          "accuracy_loss_percent=48.3 exceeds 5"
+        ],
+        "distillation_progressive_distillation_intermediate_models_stage_1": [
+          "model_size_mb=68.09 exceeds 10",
+          "accuracy_loss_percent=23.59 exceeds 5"
+        ],
+        "distillation_progressive_distillation_intermediate_models_stage_2": [
+          "model_size_mb=45.46 exceeds 10",
+          "accuracy_loss_percent=20.49 exceeds 5"
+        ],
+        "distillation_progressive_distillation_intermediate_models_stage_3": [
+          "model_size_mb=22.75 exceeds 10",
+          "accuracy_loss_percent=20.46 exceeds 5"
+        ],
+        "distillation_progressive_distillation_progressive_chain_results_final_student_model": [
+          "accuracy_loss_percent=45.64 exceeds 5"
+        ],
+        "distillation_progressive_distillation_direct_distillation_comparison_direct_model": [
+          "accuracy_loss_percent=47.4 exceeds 5"
+        ],
+        "distillation_attention_transfer_combined_distillation_results_attention_model": [
+          "accuracy_loss_percent=48.47 exceeds 5"
+        ],
+        "distillation_attention_transfer_combined_distillation_results_vanilla_model": [
+          "accuracy_loss_percent=46.86 exceeds 5"
+        ],
+        "distillation_feature_matching_response_distillation_model": [
+          "accuracy_loss_percent=47.63 exceeds 5"
+        ],
+        "distillation_feature_matching_feature_matching_model": [
+          "accuracy_loss_percent=48.13 exceeds 5"
+        ],
+        "distillation_self_distillation_independent_teachers_teacher_1_model": [
+          "accuracy_loss_percent=47.75 exceeds 5"
+        ],
+        "distillation_self_distillation_independent_teachers_teacher_2_model": [
+          "accuracy_loss_percent=47.13 exceeds 5"
+        ],
+        "distillation_self_distillation_independent_teachers_teacher_3_model": [
+          "accuracy_loss_percent=47.81 exceeds 5"
+        ],
+        "distillation_self_distillation_single_teacher_self_distillation_model": [
+          "accuracy_loss_percent=47.76 exceeds 5"
+        ],
+        "distillation_self_distillation_ensemble_distillation_2_model": [
+          "accuracy_loss_percent=48.76 exceeds 5"
+        ],
+        "distillation_self_distillation_ensemble_distillation_3_model": [
+          "accuracy_loss_percent=48.74 exceeds 5"
+        ],
+        "interaction_pruning_then_quantization_model": [
+          "model_size_mb=91.32 exceeds 10"
+        ],
+        "interaction_pruning_then_quantization_tflite_path": [
+          "model_size_mb=23.31 exceeds 10"
+        ],
+        "interaction_quantization_then_pruning_model": [
+          "model_size_mb=91.32 exceeds 10"
+        ],
+        "interaction_quantization_then_pruning_tflite_path": [
+          "model_size_mb=23.31 exceeds 10"
+        ],
+        "interaction_pruning_with_distillation_model": [
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "interaction_quantization_with_distillation_model": [
+          "accuracy_loss_percent=79.48 exceeds 5"
+        ],
+        "interaction_quantization_with_distillation_tflite_path": [
+          "accuracy_loss_percent=79.69 exceeds 5"
+        ],
+        "interaction_all_three_combined_model": [
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "interaction_all_three_combined_tflite_path": [
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "interaction_individual_controls_pruning_model": [
+          "model_size_mb=91.31 exceeds 10"
+        ],
+        "interaction_individual_controls_quantization_model": [
+          "model_size_mb=91.32 exceeds 10"
+        ],
+        "interaction_individual_controls_quantization_tflite_path": [
+          "model_size_mb=23.31 exceeds 10"
+        ],
+        "interaction_individual_controls_distillation_model": [
+          "accuracy_loss_percent=50.15 exceeds 5"
+        ],
+        "ordering_orderings_pruning -> distillation -> quantization_model": [
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "ordering_orderings_pruning -> distillation -> quantization_tflite_path": [
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "ordering_orderings_quantization -> pruning -> distillation_model": [
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "ordering_orderings_quantization -> pruning -> distillation_tflite_path": [
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "ordering_orderings_quantization -> distillation -> pruning_model": [
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "ordering_orderings_quantization -> distillation -> pruning_tflite_path": [
+          "accuracy_loss_percent=79.83 exceeds 5"
+        ],
+        "ordering_orderings_distillation -> pruning -> quantization_model": [
+          "accuracy_loss_percent=76.96 exceeds 5"
+        ],
+        "ordering_orderings_distillation -> pruning -> quantization_tflite_path": [
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "ordering_orderings_distillation -> quantization -> pruning_model": [
+          "accuracy_loss_percent=76.77 exceeds 5"
+        ],
+        "ordering_orderings_distillation -> quantization -> pruning_tflite_path": [
+          "accuracy_loss_percent=79.12 exceeds 5"
+        ],
+        "nas_architecture_search_trials_nas_w0.5_d1_model": [
+          "accuracy_loss_percent=57.86 exceeds 5"
+        ],
+        "nas_architecture_search_trials_nas_w0.5_d2_model": [
+          "accuracy_loss_percent=48.03 exceeds 5"
+        ],
+        "nas_architecture_search_trials_nas_w1_d1_model": [
+          "accuracy_loss_percent=50.57 exceeds 5"
+        ],
+        "nas_architecture_search_trials_nas_w1_d2_model": [
+          "accuracy_loss_percent=32.55 exceeds 5"
+        ],
+        "nas_architecture_search_trials_nas_w1.5_d1_model": [
+          "accuracy_loss_percent=46.1 exceeds 5"
+        ],
+        "nas_architecture_search_trials_nas_w1.5_d2_model": [
+          "accuracy_loss_percent=25.46 exceeds 5"
+        ]
+      },
+      "constraints": {
+        "model_size_mb": 10.0,
+        "single_inference_ms": 33.0,
+        "accuracy_loss_percent": 5.0
+      },
+      "objective": "highest accuracy within budgets, then lowest latency and size",
+      "status": "no_measured_candidate_meets_all_budgets",
+      "measurement_caveat": "Host latency, throughput and process RSS are screening proxies. Re-benchmark the exact exported artifact with the target device/runtime; fake-quantized floating-point graphs do not establish native INT4/binary speed or memory benefits."
+    }
+  },
+  "edge_computing": {
+    "priority_metrics": [
+      "energy_consumption",
+      "memory_usage"
+    ],
+    "recommended_techniques": [
+      "small student architecture search",
+      "structured pruning",
+      "full-integer quantization"
+    ],
+    "technique_ordering": [
+      "set flash/RAM/deadline budgets",
+      "search compact students",
+      "distill",
+      "prune and fine-tune",
+      "calibrate INT8",
+      "profile target runtime"
+    ],
+    "expected_trade_offs": {
+      "memory": "Measure activation/tensor-arena peak separately from model file size and Python process RSS.",
+      "latency": "Validate deadline tails under sustained load; a mean host latency is not a real-time guarantee.",
+      "portability": "Package preprocessing and supported operators for offline operation; unsupported operators may force a slower fallback."
+    },
+    "measured_selection": {
+      "model_name": null,
+      "metrics": {},
+      "feasible_candidates": [],
+      "rejected_candidates": {
+        "baseline": [
+          "model_size_mb=91.31 exceeds 20",
+          "peak_memory_mb=3518 exceeds 256"
+        ],
+        "pruning_magnitude_pruning_model": [
+          "model_size_mb=91.31 exceeds 20",
+          "peak_memory_mb=4228 exceeds 256"
+        ],
+        "pruning_structured_pruning_model": [
+          "model_size_mb=41.01 exceeds 20",
+          "peak_memory_mb=4967 exceeds 256"
+        ],
+        "pruning_gradual_vs_oneshot_gradual_pruning_model": [
+          "model_size_mb=91.31 exceeds 20",
+          "peak_memory_mb=6262 exceeds 256"
+        ],
+        "pruning_gradual_vs_oneshot_oneshot_pruning_model": [
+          "model_size_mb=91.31 exceeds 20",
+          "peak_memory_mb=6339 exceeds 256"
+        ],
+        "pruning_lottery_ticket_model": [
+          "model_size_mb=91.31 exceeds 20",
+          "peak_memory_mb=8958 exceeds 256"
+        ],
+        "pruning_lottery_ticket_random_initialization_control_model": [
+          "model_size_mb=91.31 exceeds 20",
+          "peak_memory_mb=9029 exceeds 256",
+          "accuracy_loss_percent=12.96 exceeds 5"
+        ],
+        "quantization_mixed_bit_mixed_bit_models_uniform_2_model": [
+          "model_size_mb=91.32 exceeds 20",
+          "peak_memory_mb=2096 exceeds 256",
+          "accuracy_loss_percent=79.82 exceeds 5"
+        ],
+        "quantization_mixed_bit_mixed_bit_models_uniform_4_model": [
+          "model_size_mb=91.32 exceeds 20",
+          "peak_memory_mb=2193 exceeds 256",
+          "accuracy_loss_percent=71.28 exceeds 5"
+        ],
+        "quantization_mixed_bit_mixed_bit_models_uniform_8_model": [
+          "model_size_mb=91.32 exceeds 20",
+          "peak_memory_mb=2107 exceeds 256"
+        ],
+        "quantization_mixed_bit_mixed_bit_models_mixed_model": [
+          "model_size_mb=91.32 exceeds 20",
+          "peak_memory_mb=2194 exceeds 256",
+          "accuracy_loss_percent=78.61 exceeds 5"
+        ],
+        "quantization_ptq_vs_qat_ptq_results_8_model": [
+          "model_size_mb=91.32 exceeds 20",
+          "peak_memory_mb=4253 exceeds 256"
+        ],
+        "quantization_ptq_vs_qat_ptq_results_8_tflite_path": [
+          "model_size_mb=23.31 exceeds 20",
+          "peak_memory_mb=4428 exceeds 256"
+        ],
+        "quantization_ptq_vs_qat_ptq_results_4_model": [
+          "model_size_mb=91.32 exceeds 20",
+          "peak_memory_mb=4250 exceeds 256",
+          "accuracy_loss_percent=71.28 exceeds 5"
+        ],
+        "quantization_ptq_vs_qat_qat_results_8_model": [
+          "model_size_mb=91.32 exceeds 20",
+          "peak_memory_mb=4337 exceeds 256"
+        ],
+        "quantization_ptq_vs_qat_qat_results_8_tflite_path": [
+          "model_size_mb=23.31 exceeds 20",
+          "peak_memory_mb=4505 exceeds 256"
+        ],
+        "quantization_ptq_vs_qat_qat_results_4_model": [
+          "model_size_mb=91.32 exceeds 20",
+          "peak_memory_mb=4429 exceeds 256",
+          "accuracy_loss_percent=13.4 exceeds 5"
+        ],
+        "quantization_extreme_quantization_int4_quantization_model": [
+          "model_size_mb=91.32 exceeds 20",
+          "peak_memory_mb=6021 exceeds 256",
+          "accuracy_loss_percent=13.47 exceeds 5"
+        ],
+        "quantization_extreme_quantization_binary_quantization_model": [
+          "model_size_mb=91.32 exceeds 20",
+          "peak_memory_mb=6233 exceeds 256",
+          "accuracy_loss_percent=78.98 exceeds 5"
+        ],
+        "quantization_dynamic_vs_static_float32_tflite_path": [
+          "model_size_mb=90.39 exceeds 20",
+          "single_inference_ms=35.02 exceeds 20",
+          "peak_memory_mb=7635 exceeds 256"
+        ],
+        "quantization_dynamic_vs_static_dynamic_tflite_path": [
+          "model_size_mb=23.01 exceeds 20",
+          "single_inference_ms=26.56 exceeds 20",
+          "peak_memory_mb=7176 exceeds 256"
+        ],
+        "quantization_dynamic_vs_static_int8_tflite_path": [
+          "model_size_mb=23.31 exceeds 20",
+          "peak_memory_mb=7157 exceeds 256"
+        ],
+        "distillation_temperature_optimization_trials_1_model": [
+          "peak_memory_mb=1.326e+04 exceeds 256",
+          "accuracy_loss_percent=47.38 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_3.11111_model": [
+          "peak_memory_mb=1.327e+04 exceeds 256",
+          "accuracy_loss_percent=50.98 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_5.22222_model": [
+          "peak_memory_mb=1.327e+04 exceeds 256",
+          "accuracy_loss_percent=48.32 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_7.33333_model": [
+          "peak_memory_mb=1.327e+04 exceeds 256",
+          "accuracy_loss_percent=49.19 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_9.44444_model": [
+          "peak_memory_mb=1.328e+04 exceeds 256",
+          "accuracy_loss_percent=49.43 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_11.5556_model": [
+          "peak_memory_mb=1.328e+04 exceeds 256",
+          "accuracy_loss_percent=49.89 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_13.6667_model": [
+          "peak_memory_mb=1.328e+04 exceeds 256",
+          "accuracy_loss_percent=47.14 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_15.7778_model": [
+          "peak_memory_mb=1.329e+04 exceeds 256",
+          "accuracy_loss_percent=48.67 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_17.8889_model": [
+          "peak_memory_mb=1.33e+04 exceeds 256",
+          "accuracy_loss_percent=49.62 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_20_model": [
+          "peak_memory_mb=1.33e+04 exceeds 256",
+          "accuracy_loss_percent=48.3 exceeds 5"
+        ],
+        "distillation_progressive_distillation_intermediate_models_stage_1": [
+          "model_size_mb=68.09 exceeds 20",
+          "peak_memory_mb=1.363e+04 exceeds 256",
+          "accuracy_loss_percent=23.59 exceeds 5"
+        ],
+        "distillation_progressive_distillation_intermediate_models_stage_2": [
+          "model_size_mb=45.46 exceeds 20",
+          "peak_memory_mb=1.364e+04 exceeds 256",
+          "accuracy_loss_percent=20.49 exceeds 5"
+        ],
+        "distillation_progressive_distillation_intermediate_models_stage_3": [
+          "model_size_mb=22.75 exceeds 20",
+          "peak_memory_mb=1.365e+04 exceeds 256",
+          "accuracy_loss_percent=20.46 exceeds 5"
+        ],
+        "distillation_progressive_distillation_progressive_chain_results_final_student_model": [
+          "peak_memory_mb=1.361e+04 exceeds 256",
+          "accuracy_loss_percent=45.64 exceeds 5"
+        ],
+        "distillation_progressive_distillation_direct_distillation_comparison_direct_model": [
+          "peak_memory_mb=1.362e+04 exceeds 256",
+          "accuracy_loss_percent=47.4 exceeds 5"
+        ],
+        "distillation_attention_transfer_combined_distillation_results_attention_model": [
+          "peak_memory_mb=1.389e+04 exceeds 256",
+          "accuracy_loss_percent=48.47 exceeds 5"
+        ],
+        "distillation_attention_transfer_combined_distillation_results_vanilla_model": [
+          "peak_memory_mb=1.389e+04 exceeds 256",
+          "accuracy_loss_percent=46.86 exceeds 5"
+        ],
+        "distillation_feature_matching_response_distillation_model": [
+          "peak_memory_mb=1.423e+04 exceeds 256",
+          "accuracy_loss_percent=47.63 exceeds 5"
+        ],
+        "distillation_feature_matching_feature_matching_model": [
+          "peak_memory_mb=1.423e+04 exceeds 256",
+          "accuracy_loss_percent=48.13 exceeds 5"
+        ],
+        "distillation_self_distillation_independent_teachers_teacher_1_model": [
+          "peak_memory_mb=1.466e+04 exceeds 256",
+          "accuracy_loss_percent=47.75 exceeds 5"
+        ],
+        "distillation_self_distillation_independent_teachers_teacher_2_model": [
+          "peak_memory_mb=1.466e+04 exceeds 256",
+          "accuracy_loss_percent=47.13 exceeds 5"
+        ],
+        "distillation_self_distillation_independent_teachers_teacher_3_model": [
+          "peak_memory_mb=1.466e+04 exceeds 256",
+          "accuracy_loss_percent=47.81 exceeds 5"
+        ],
+        "distillation_self_distillation_single_teacher_self_distillation_model": [
+          "peak_memory_mb=1.466e+04 exceeds 256",
+          "accuracy_loss_percent=47.76 exceeds 5"
+        ],
+        "distillation_self_distillation_ensemble_distillation_2_model": [
+          "peak_memory_mb=1.467e+04 exceeds 256",
+          "accuracy_loss_percent=48.76 exceeds 5"
+        ],
+        "distillation_self_distillation_ensemble_distillation_3_model": [
+          "peak_memory_mb=1.467e+04 exceeds 256",
+          "accuracy_loss_percent=48.74 exceeds 5"
+        ],
+        "interaction_pruning_then_quantization_model": [
+          "model_size_mb=91.32 exceeds 20",
+          "peak_memory_mb=2.239e+04 exceeds 256"
+        ],
+        "interaction_pruning_then_quantization_tflite_path": [
+          "model_size_mb=23.31 exceeds 20",
+          "peak_memory_mb=2.253e+04 exceeds 256"
+        ],
+        "interaction_quantization_then_pruning_model": [
+          "model_size_mb=91.32 exceeds 20",
+          "peak_memory_mb=2.243e+04 exceeds 256"
+        ],
+        "interaction_quantization_then_pruning_tflite_path": [
+          "model_size_mb=23.31 exceeds 20",
+          "peak_memory_mb=2.26e+04 exceeds 256"
+        ],
+        "interaction_pruning_with_distillation_model": [
+          "peak_memory_mb=2.244e+04 exceeds 256",
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "interaction_quantization_with_distillation_model": [
+          "peak_memory_mb=2.241e+04 exceeds 256",
+          "accuracy_loss_percent=79.48 exceeds 5"
+        ],
+        "interaction_quantization_with_distillation_tflite_path": [
+          "peak_memory_mb=2.242e+04 exceeds 256",
+          "accuracy_loss_percent=79.69 exceeds 5"
+        ],
+        "interaction_all_three_combined_model": [
+          "peak_memory_mb=2.242e+04 exceeds 256",
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "interaction_all_three_combined_tflite_path": [
+          "peak_memory_mb=2.243e+04 exceeds 256",
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "interaction_individual_controls_pruning_model": [
+          "model_size_mb=91.31 exceeds 20",
+          "peak_memory_mb=2.26e+04 exceeds 256"
+        ],
+        "interaction_individual_controls_quantization_model": [
+          "model_size_mb=91.32 exceeds 20",
+          "peak_memory_mb=2.264e+04 exceeds 256"
+        ],
+        "interaction_individual_controls_quantization_tflite_path": [
+          "model_size_mb=23.31 exceeds 20",
+          "peak_memory_mb=2.281e+04 exceeds 256"
+        ],
+        "interaction_individual_controls_distillation_model": [
+          "peak_memory_mb=2.264e+04 exceeds 256",
+          "accuracy_loss_percent=50.15 exceeds 5"
+        ],
+        "ordering_orderings_pruning -> distillation -> quantization_model": [
+          "peak_memory_mb=2.587e+04 exceeds 256",
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "ordering_orderings_pruning -> distillation -> quantization_tflite_path": [
+          "peak_memory_mb=2.588e+04 exceeds 256",
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "ordering_orderings_quantization -> pruning -> distillation_model": [
+          "peak_memory_mb=2.588e+04 exceeds 256",
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "ordering_orderings_quantization -> pruning -> distillation_tflite_path": [
+          "peak_memory_mb=2.588e+04 exceeds 256",
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "ordering_orderings_quantization -> distillation -> pruning_model": [
+          "peak_memory_mb=2.588e+04 exceeds 256",
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "ordering_orderings_quantization -> distillation -> pruning_tflite_path": [
+          "peak_memory_mb=2.589e+04 exceeds 256",
+          "accuracy_loss_percent=79.83 exceeds 5"
+        ],
+        "ordering_orderings_distillation -> pruning -> quantization_model": [
+          "peak_memory_mb=2.589e+04 exceeds 256",
+          "accuracy_loss_percent=76.96 exceeds 5"
+        ],
+        "ordering_orderings_distillation -> pruning -> quantization_tflite_path": [
+          "peak_memory_mb=2.589e+04 exceeds 256",
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "ordering_orderings_distillation -> quantization -> pruning_model": [
+          "peak_memory_mb=2.59e+04 exceeds 256",
+          "accuracy_loss_percent=76.77 exceeds 5"
+        ],
+        "ordering_orderings_distillation -> quantization -> pruning_tflite_path": [
+          "peak_memory_mb=2.59e+04 exceeds 256",
+          "accuracy_loss_percent=79.12 exceeds 5"
+        ],
+        "nas_architecture_search_trials_nas_w0.5_d1_model": [
+          "peak_memory_mb=2.685e+04 exceeds 256",
+          "accuracy_loss_percent=57.86 exceeds 5"
+        ],
+        "nas_architecture_search_trials_nas_w0.5_d2_model": [
+          "peak_memory_mb=2.686e+04 exceeds 256",
+          "accuracy_loss_percent=48.03 exceeds 5"
+        ],
+        "nas_architecture_search_trials_nas_w1_d1_model": [
+          "peak_memory_mb=2.686e+04 exceeds 256",
+          "accuracy_loss_percent=50.57 exceeds 5"
+        ],
+        "nas_architecture_search_trials_nas_w1_d2_model": [
+          "peak_memory_mb=2.688e+04 exceeds 256",
+          "accuracy_loss_percent=32.55 exceeds 5"
+        ],
+        "nas_architecture_search_trials_nas_w1.5_d1_model": [
+          "peak_memory_mb=2.688e+04 exceeds 256",
+          "accuracy_loss_percent=46.1 exceeds 5"
+        ],
+        "nas_architecture_search_trials_nas_w1.5_d2_model": [
+          "peak_memory_mb=2.69e+04 exceeds 256",
+          "accuracy_loss_percent=25.46 exceeds 5"
+        ]
+      },
+      "constraints": {
+        "model_size_mb": 20.0,
+        "single_inference_ms": 20.0,
+        "peak_memory_mb": 256.0,
+        "accuracy_loss_percent": 5.0
+      },
+      "objective": "highest accuracy within budgets, then lowest latency and size",
+      "status": "no_measured_candidate_meets_all_budgets",
+      "measurement_caveat": "Host latency, throughput and process RSS are screening proxies. Re-benchmark the exact exported artifact with the target device/runtime; fake-quantized floating-point graphs do not establish native INT4/binary speed or memory benefits."
+    }
+  },
+  "cloud_inference": {
+    "priority_metrics": [
+      "throughput",
+      "accuracy"
+    ],
+    "recommended_techniques": [
+      "distillation",
+      "hardware-aligned structured pruning",
+      "backend-supported low precision"
+    ],
+    "technique_ordering": [
+      "choose serving batch/concurrency",
+      "distill",
+      "compare pruning and quantization orders",
+      "benchmark actual backend",
+      "select a Pareto-efficient candidate"
+    ],
+    "expected_trade_offs": {
+      "throughput": "Choose from measured batch throughput subject to an accuracy budget; smaller files do not imply higher throughput.",
+      "cost": "Amortize extra compression training and evaluate serving utilization before claiming cost savings.",
+      "accuracy": "Use the same dataset split and multiple seeds; do not choose hyperparameters using held-out test accuracy."
+    },
+    "measured_selection": {
+      "model_name": "pruning_lottery_ticket_model",
+      "metrics": {
+        "model_name": "pruning_lottery_ticket_model",
+        "test_accuracy": 0.7855,
+        "model_size_mb": 91.31426811218262,
+        "artifact_path": "compressed_models/lottery_ticket.keras",
+        "weight_size_mb": 90.76161193847656,
+        "single_inference_ms": 3.517264034599066,
+        "single_p95_ms": 3.584310587029904,
+        "batch_inference_ms": 6.799733964726329,
+        "batch_size": 64,
+        "throughput_images_per_second": 9412.132935200183,
+        "peak_memory_mb": 8958.0078125,
+        "incremental_memory_mb": 0.0703125,
+        "flops": 1416871936,
+        "flops_reduction": 0.0,
+        "compression_ratio": 1.0,
+        "accuracy_loss_percent": 2.2600000000000064,
+        "energy_consumption": null,
+        "energy_method": "unavailable: no power measurement",
+        "ece": 0.1281089845180512,
+        "negative_log_likelihood": 1.0738619565963745,
+        "brier_score": 0.3401155645833065,
+        "execution_backend": "TensorFlow default device/threads",
+        "flops_method": "Conv/Dense estimate; multiply-add=2; excludes preprocessing/BN/activation",
+        "memory_method": "sampled process RSS; includes runtime and retained models",
+        "compression_target_met": false,
+        "source_job": "30015147"
+      },
+      "feasible_candidates": [
+        "pruning_lottery_ticket_model",
+        "pruning_structured_pruning_model",
+        "pruning_gradual_vs_oneshot_oneshot_pruning_model",
+        "pruning_gradual_vs_oneshot_gradual_pruning_model",
+        "baseline",
+        "pruning_magnitude_pruning_model",
+        "interaction_individual_controls_pruning_model",
+        "interaction_quantization_then_pruning_model",
+        "interaction_individual_controls_quantization_model",
+        "interaction_pruning_then_quantization_model",
+        "quantization_ptq_vs_qat_qat_results_8_model",
+        "quantization_mixed_bit_mixed_bit_models_uniform_8_model",
+        "quantization_ptq_vs_qat_ptq_results_8_model",
+        "interaction_pruning_then_quantization_tflite_path",
+        "interaction_quantization_then_pruning_tflite_path",
+        "interaction_individual_controls_quantization_tflite_path",
+        "quantization_dynamic_vs_static_int8_tflite_path",
+        "quantization_ptq_vs_qat_qat_results_8_tflite_path",
+        "quantization_ptq_vs_qat_ptq_results_8_tflite_path",
+        "quantization_dynamic_vs_static_dynamic_tflite_path",
+        "quantization_dynamic_vs_static_float32_tflite_path"
+      ],
+      "rejected_candidates": {
+        "pruning_lottery_ticket_random_initialization_control_model": [
+          "accuracy_loss_percent=12.96 exceeds 5"
+        ],
+        "quantization_mixed_bit_mixed_bit_models_uniform_2_model": [
+          "accuracy_loss_percent=79.82 exceeds 5"
+        ],
+        "quantization_mixed_bit_mixed_bit_models_uniform_4_model": [
+          "accuracy_loss_percent=71.28 exceeds 5"
+        ],
+        "quantization_mixed_bit_mixed_bit_models_mixed_model": [
+          "accuracy_loss_percent=78.61 exceeds 5"
+        ],
+        "quantization_ptq_vs_qat_ptq_results_4_model": [
+          "accuracy_loss_percent=71.28 exceeds 5"
+        ],
+        "quantization_ptq_vs_qat_qat_results_4_model": [
+          "accuracy_loss_percent=13.4 exceeds 5"
+        ],
+        "quantization_extreme_quantization_int4_quantization_model": [
+          "accuracy_loss_percent=13.47 exceeds 5"
+        ],
+        "quantization_extreme_quantization_binary_quantization_model": [
+          "accuracy_loss_percent=78.98 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_1_model": [
+          "accuracy_loss_percent=47.38 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_3.11111_model": [
+          "accuracy_loss_percent=50.98 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_5.22222_model": [
+          "accuracy_loss_percent=48.32 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_7.33333_model": [
+          "accuracy_loss_percent=49.19 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_9.44444_model": [
+          "accuracy_loss_percent=49.43 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_11.5556_model": [
+          "accuracy_loss_percent=49.89 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_13.6667_model": [
+          "accuracy_loss_percent=47.14 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_15.7778_model": [
+          "accuracy_loss_percent=48.67 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_17.8889_model": [
+          "accuracy_loss_percent=49.62 exceeds 5"
+        ],
+        "distillation_temperature_optimization_trials_20_model": [
+          "accuracy_loss_percent=48.3 exceeds 5"
+        ],
+        "distillation_progressive_distillation_intermediate_models_stage_1": [
+          "accuracy_loss_percent=23.59 exceeds 5"
+        ],
+        "distillation_progressive_distillation_intermediate_models_stage_2": [
+          "accuracy_loss_percent=20.49 exceeds 5"
+        ],
+        "distillation_progressive_distillation_intermediate_models_stage_3": [
+          "accuracy_loss_percent=20.46 exceeds 5"
+        ],
+        "distillation_progressive_distillation_progressive_chain_results_final_student_model": [
+          "accuracy_loss_percent=45.64 exceeds 5"
+        ],
+        "distillation_progressive_distillation_direct_distillation_comparison_direct_model": [
+          "accuracy_loss_percent=47.4 exceeds 5"
+        ],
+        "distillation_attention_transfer_combined_distillation_results_attention_model": [
+          "accuracy_loss_percent=48.47 exceeds 5"
+        ],
+        "distillation_attention_transfer_combined_distillation_results_vanilla_model": [
+          "accuracy_loss_percent=46.86 exceeds 5"
+        ],
+        "distillation_feature_matching_response_distillation_model": [
+          "accuracy_loss_percent=47.63 exceeds 5"
+        ],
+        "distillation_feature_matching_feature_matching_model": [
+          "accuracy_loss_percent=48.13 exceeds 5"
+        ],
+        "distillation_self_distillation_independent_teachers_teacher_1_model": [
+          "accuracy_loss_percent=47.75 exceeds 5"
+        ],
+        "distillation_self_distillation_independent_teachers_teacher_2_model": [
+          "accuracy_loss_percent=47.13 exceeds 5"
+        ],
+        "distillation_self_distillation_independent_teachers_teacher_3_model": [
+          "accuracy_loss_percent=47.81 exceeds 5"
+        ],
+        "distillation_self_distillation_single_teacher_self_distillation_model": [
+          "accuracy_loss_percent=47.76 exceeds 5"
+        ],
+        "distillation_self_distillation_ensemble_distillation_2_model": [
+          "accuracy_loss_percent=48.76 exceeds 5"
+        ],
+        "distillation_self_distillation_ensemble_distillation_3_model": [
+          "accuracy_loss_percent=48.74 exceeds 5"
+        ],
+        "interaction_pruning_with_distillation_model": [
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "interaction_quantization_with_distillation_model": [
+          "accuracy_loss_percent=79.48 exceeds 5"
+        ],
+        "interaction_quantization_with_distillation_tflite_path": [
+          "accuracy_loss_percent=79.69 exceeds 5"
+        ],
+        "interaction_all_three_combined_model": [
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "interaction_all_three_combined_tflite_path": [
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "interaction_individual_controls_distillation_model": [
+          "accuracy_loss_percent=50.15 exceeds 5"
+        ],
+        "ordering_orderings_pruning -> distillation -> quantization_model": [
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "ordering_orderings_pruning -> distillation -> quantization_tflite_path": [
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "ordering_orderings_quantization -> pruning -> distillation_model": [
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "ordering_orderings_quantization -> pruning -> distillation_tflite_path": [
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "ordering_orderings_quantization -> distillation -> pruning_model": [
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "ordering_orderings_quantization -> distillation -> pruning_tflite_path": [
+          "accuracy_loss_percent=79.83 exceeds 5"
+        ],
+        "ordering_orderings_distillation -> pruning -> quantization_model": [
+          "accuracy_loss_percent=76.96 exceeds 5"
+        ],
+        "ordering_orderings_distillation -> pruning -> quantization_tflite_path": [
+          "accuracy_loss_percent=79.81 exceeds 5"
+        ],
+        "ordering_orderings_distillation -> quantization -> pruning_model": [
+          "accuracy_loss_percent=76.77 exceeds 5"
+        ],
+        "ordering_orderings_distillation -> quantization -> pruning_tflite_path": [
+          "accuracy_loss_percent=79.12 exceeds 5"
+        ],
+        "nas_architecture_search_trials_nas_w0.5_d1_model": [
+          "accuracy_loss_percent=57.86 exceeds 5"
+        ],
+        "nas_architecture_search_trials_nas_w0.5_d2_model": [
+          "accuracy_loss_percent=48.03 exceeds 5"
+        ],
+        "nas_architecture_search_trials_nas_w1_d1_model": [
+          "accuracy_loss_percent=50.57 exceeds 5"
+        ],
+        "nas_architecture_search_trials_nas_w1_d2_model": [
+          "accuracy_loss_percent=32.55 exceeds 5"
+        ],
+        "nas_architecture_search_trials_nas_w1.5_d1_model": [
+          "accuracy_loss_percent=46.1 exceeds 5"
+        ],
+        "nas_architecture_search_trials_nas_w1.5_d2_model": [
+          "accuracy_loss_percent=25.46 exceeds 5"
+        ]
+      },
+      "constraints": {
+        "accuracy_loss_percent": 5.0
+      },
+      "objective": "highest throughput within budgets",
+      "status": "candidate_selected",
+      "measurement_caveat": "Host latency, throughput and process RSS are screening proxies. Re-benchmark the exact exported artifact with the target device/runtime; fake-quantized floating-point graphs do not establish native INT4/binary speed or memory benefits."
+    }
+  }
+}

@@ -17,6 +17,10 @@ Suggested sequence to test: choose student architecture → distill/fine-tune �
 - **Latency:** Native operator/delegate support and activation traffic determine gains; sparse weights alone do not reduce dense-kernel work.
 - **Battery:** Measure device energy and duty cycle before estimating battery impact.
 
+Measured host candidate: none meets every configured budget.
+
+Selection rule: highest accuracy within budgets, then lowest latency and size.
+
 ## Edge Computing
 
 Priorities: energy_consumption, memory_usage.
@@ -29,6 +33,10 @@ Suggested sequence to test: set flash/RAM/deadline budgets → search compact st
 - **Latency:** Validate deadline tails under sustained load; a mean host latency is not a real-time guarantee.
 - **Portability:** Package preprocessing and supported operators for offline operation; unsupported operators may force a slower fallback.
 
+Measured host candidate: none meets every configured budget.
+
+Selection rule: highest accuracy within budgets, then lowest latency and size.
+
 ## Cloud Inference
 
 Priorities: throughput, accuracy.
@@ -40,6 +48,10 @@ Suggested sequence to test: choose serving batch/concurrency → distill → com
 - **Throughput:** Choose from measured batch throughput subject to an accuracy budget; smaller files do not imply higher throughput.
 - **Cost:** Amortize extra compression training and evaluate serving utilization before claiming cost savings.
 - **Accuracy:** Use the same dataset split and multiple seeds; do not choose hyperparameters using held-out test accuracy.
+
+Measured host candidate: `pruning_lottery_ticket_model`.
+
+Selection rule: highest throughput within budgets.
 
 ## Interaction and failure checks
 

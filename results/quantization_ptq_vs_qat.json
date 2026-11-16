@@ -1,0 +1,238 @@
+{
+  "ptq_results": {
+    "8": {
+      "model": {
+        "model_name": "cifar100_resnet50",
+        "parameters": 23792612
+      },
+      "validation_accuracy": 0.8174,
+      "model_path": "compressed_models/ptq_8.keras",
+      "packed_weights_path": "compressed_models/ptq_8.packed.npz",
+      "keras_artifact_bytes": 95757174,
+      "packed_storage_bytes": 21067986,
+      "quantized_kernel_parameters": 23659712,
+      "remaining_fp32_parameters": 132900,
+      "remaining_fp32_state": "biases, batch normalization and non-kernel layer weights",
+      "execution": "FP32 reference kernels with simulated low-bit values",
+      "training_history": {},
+      "tflite_path": "compressed_models/ptq_int8.tflite",
+      "tflite_validation_accuracy": 0.8162,
+      "tflite_bytes": 24445752
+    },
+    "4": {
+      "model": {
+        "model_name": "cifar100_resnet50",
+        "parameters": 23792612
+      },
+      "validation_accuracy": 0.0978,
+      "model_path": "compressed_models/ptq_4.keras",
+      "packed_weights_path": "compressed_models/ptq_4.packed.npz",
+      "keras_artifact_bytes": 95757174,
+      "packed_storage_bytes": 9168435,
+      "quantized_kernel_parameters": 23659712,
+      "remaining_fp32_parameters": 132900,
+      "remaining_fp32_state": "biases, batch normalization and non-kernel layer weights",
+      "execution": "FP32 reference kernels with simulated low-bit values",
+      "training_history": {}
+    }
+  },
+  "qat_results": {
+    "8": {
+      "model": {
+        "model_name": "cifar100_resnet50",
+        "parameters": 23792612
+      },
+      "validation_accuracy": 0.8128,
+      "model_path": "compressed_models/qat_8.keras",
+      "packed_weights_path": "compressed_models/qat_8.packed.npz",
+      "keras_artifact_bytes": 95757174,
+      "packed_storage_bytes": 21069359,
+      "quantized_kernel_parameters": 23659712,
+      "remaining_fp32_parameters": 132900,
+      "remaining_fp32_state": "biases, batch normalization and non-kernel layer weights",
+      "execution": "FP32 reference kernels with simulated low-bit values",
+      "training_history": {
+        "loss": [
+          0.058494020253419876,
+          0.05603354424238205,
+          0.054197847843170166,
+          0.05311744287610054,
+          0.050308164209127426,
+          0.051596518605947495,
+          0.04985954239964485,
+          0.050849881023168564,
+          0.050045859068632126,
+          0.049476101994514465
+        ],
+        "accuracy": [
+          0.9959999918937683,
+          0.9968000054359436,
+          0.9970444440841675,
+          0.997511088848114,
+          0.9983999729156494,
+          0.9976222515106201,
+          0.9980444312095642,
+          0.9977111220359802,
+          0.998199999332428,
+          0.9982888698577881
+        ],
+        "val_loss": [
+          0.9445742964744568,
+          0.9636347889900208,
+          0.9566555619239807,
+          0.9559143781661987,
+          0.945659875869751,
+          0.9488210082054138,
+          0.9501527547836304,
+          0.9451813697814941,
+          0.9501217603683472,
+          0.9497134685516357
+        ],
+        "val_accuracy": [
+          0.8141999840736389,
+          0.8091999888420105,
+          0.8141999840736389,
+          0.8119999766349792,
+          0.8133999705314636,
+          0.8159999847412109,
+          0.8145999908447266,
+          0.8126000165939331,
+          0.8155999779701233,
+          0.8133999705314636
+        ],
+        "lr": [
+          9.999999747378752e-06,
+          9.999999747378752e-06,
+          9.999999747378752e-06,
+          9.999999747378752e-06,
+          4.999999873689376e-06,
+          4.999999873689376e-06,
+          4.999999873689376e-06,
+          2.499999936844688e-06,
+          2.499999936844688e-06,
+          2.499999936844688e-06
+        ]
+      },
+      "training_time_seconds": 345.7100749859819,
+      "tflite_path": "compressed_models/qat_int8.tflite",
+      "tflite_validation_accuracy": 0.8136,
+      "tflite_bytes": 24445752,
+      "tflite_export_method": "Bake QAT kernel values, then recalibrate activation scales for Lite's native INT8 kernels; deployment accuracy measured separately."
+    },
+    "4": {
+      "model": {
+        "model_name": "cifar100_resnet50",
+        "parameters": 23792612
+      },
+      "validation_accuracy": 0.6818,
+      "model_path": "compressed_models/qat_4.keras",
+      "packed_weights_path": "compressed_models/qat_4.packed.npz",
+      "keras_artifact_bytes": 95757174,
+      "packed_storage_bytes": 9167119,
+      "quantized_kernel_parameters": 23659712,
+      "remaining_fp32_parameters": 132900,
+      "remaining_fp32_state": "biases, batch normalization and non-kernel layer weights",
+      "execution": "FP32 reference kernels with simulated low-bit values",
+      "training_history": {
+        "loss": [
+          2.0392932891845703,
+          1.4661504030227661,
+          1.2252156734466553,
+          1.1055794954299927,
+          1.0077413320541382,
+          0.9529633522033691,
+          0.8976677060127258,
+          0.8756035566329956,
+          0.8236714601516724,
+          0.7851477265357971
+        ],
+        "accuracy": [
+          0.5121555328369141,
+          0.6218000054359436,
+          0.6746444702148438,
+          0.701200008392334,
+          0.7237777709960938,
+          0.7376222014427185,
+          0.7522000074386597,
+          0.7555555701255798,
+          0.7709333300590515,
+          0.7791110873222351
+        ],
+        "val_loss": [
+          2.0351076126098633,
+          1.79244065284729,
+          1.6865956783294678,
+          1.5470000505447388,
+          1.482408046722412,
+          1.4479533433914185,
+          1.414062261581421,
+          1.395530104637146,
+          1.375046968460083,
+          1.3426202535629272
+        ],
+        "val_accuracy": [
+          0.5356000065803528,
+          0.5871999859809875,
+          0.5982000231742859,
+          0.6327999830245972,
+          0.6389999985694885,
+          0.6435999870300293,
+          0.6571999788284302,
+          0.6585999727249146,
+          0.6718000173568726,
+          0.6819999814033508
+        ],
+        "lr": [
+          9.999999747378752e-06,
+          9.999999747378752e-06,
+          9.999999747378752e-06,
+          9.999999747378752e-06,
+          9.999999747378752e-06,
+          9.999999747378752e-06,
+          9.999999747378752e-06,
+          9.999999747378752e-06,
+          9.999999747378752e-06,
+          9.999999747378752e-06
+        ]
+      },
+      "training_time_seconds": 364.0778892530361
+    }
+  },
+  "accuracy_comparison": {
+    "8": {
+      "ptq": 0.8174,
+      "qat": 0.8128,
+      "qat_gain_percentage_points": -0.46000000000000485
+    },
+    "4": {
+      "ptq": 0.0978,
+      "qat": 0.6818,
+      "qat_gain_percentage_points": 58.4
+    }
+  },
+  "training_efficiency": {
+    "8": {
+      "ptq_setup_and_evaluation_seconds": 16.42990565497894,
+      "qat_training_seconds": 345.7100749859819
+    },
+    "4": {
+      "ptq_setup_and_evaluation_seconds": 16.651156203006394,
+      "qat_training_seconds": 364.0778892530361
+    }
+  },
+  "calibration_analysis": {
+    "32": {
+      "calibration_samples": 32,
+      "validation_accuracy": 0.815
+    },
+    "128": {
+      "calibration_samples": 128,
+      "validation_accuracy": 0.8164
+    },
+    "1000": {
+      "calibration_samples": 1000,
+      "validation_accuracy": 0.8174
+    }
+  },
+  "calibration_requirements": "PTQ and this QAT initialization use training-only, unlabeled calibration data; QAT additionally uses labeled training data. Selection uses validation data."
+}
