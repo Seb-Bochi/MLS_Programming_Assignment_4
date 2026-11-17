@@ -105,6 +105,15 @@ if "GPU" not in value.device:
 print("TensorFlow:", tf.__version__, "GPUs:", gpus, "device:", value.device)
 PY
 
+if [[ "$MODE" == seeds ]]; then
+    [[ -f "$OUTPUT_DIR/baseline_model.keras" ]] || {
+        echo 'Set BASELINE_SOURCE to an existing trained baseline.' >&2; exit 1;
+    }
+    python -u scripts/evaluate_seeds.py --baseline "$OUTPUT_DIR/baseline_model.keras" \
+        --output-dir "$OUTPUT_DIR" --epochs "${FINETUNE_EPOCHS:-10}" --num-seeds 3
+    exit 0
+fi
+
 args=(--output-dir "$OUTPUT_DIR" --batch-size "${BATCH_SIZE:-64}"
       --baseline-epochs "${BASELINE_EPOCHS:-100}"
       --finetune-epochs "${FINETUNE_EPOCHS:-10}"

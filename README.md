@@ -4,7 +4,7 @@ This implementation follows the supplied skeleton's functions, classes, method n
 result dictionaries and six-step execution flow. The requested code is split into the
 listed deliverable files. Small shared utilities live in `common.py`; `main.py` runs
 the pipeline. `neural_architecture_search.py` supplies the architecture search named in
-the objective but missing from the skeleton. No LaTeX or PDF reports are generated.
+the objective but missing from the skeleton. The training pipeline does not generate reports.
 See `DELIVERABLES_CHECKLIST.md` for the current submission audit and remaining gaps.
 
 ## Consolidated DTU results
@@ -37,9 +37,11 @@ Use it only in a clean destination with those downloads available; it refuses to
 overwrite an already assembled `baseline_model.keras`. The submission's
 `performance_benchmarks.xlsx` contains the consolidated benchmark records.
 
-The two required PDFs, `compression_analysis_report.pdf` and
-`interaction_analysis_summary.pdf`, are still missing under the earlier instruction
-not to create reports. Multiple-seed evaluation is implemented but has no saved
+`interaction_analysis_summary.pdf` summarizes the measured Part 4 combinations,
+and ordering comparisons in two tables. Rebuild it without training using
+`python scripts/build_interaction_summary.py` (optional dependency: `reportlab==4.4.9`).
+The main `compression_analysis_report.pdf` remains missing under the earlier
+instruction not to create that report. Multiple-seed evaluation is implemented but has no saved
 full-data experimental results; the downloaded runs use seed 42.
 
 ## Setup
@@ -263,6 +265,26 @@ target is met; the combined 10x/<5-point target remains unmet. Synthetic and
 one-epoch runs are execution checks and must be kept separate from this evidence.
 
 ## Validation
+
+### Repeated training seeds
+
+`scripts/evaluate_seeds.py` runs INT8 reference QAT from the same trained baseline
+with seeds 42, 43 and 44 on a fixed CIFAR-100 split. It saves each model/history,
+test accuracy, mean, sample standard deviation, 95% t confidence interval and a
+paired comparison against the fixed baseline. This measures QAT training variability,
+not baseline retraining variability or every compression family. Three seeds give
+limited statistical power. The measurements remain missing until this job completes.
+
+On DTU, from the project directory (substitute a valid notification address):
+
+```bash
+bsub -N -u YOUR_EMAIL_ADDRESS \
+  -env "all,MODE=seeds,BASELINE_SOURCE=$PWD/outputs/dtu_30015147/baseline_model.keras" \
+  < run_dtu_hpc.sh
+```
+
+Upload `scripts/evaluate_seeds.py` and the updated `run_dtu_hpc.sh` first. The job
+uses its own `outputs/dtu_<job-id>/` directory and writes `seed_results.json` there.
 
 Run `python scripts/verify_deliverables.py` to check saved archive integrity,
 finite model/checkpoint tensors, portable model references and workbook values.

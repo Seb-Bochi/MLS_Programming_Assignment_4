@@ -1,7 +1,7 @@
 # Deliverables checklist
 
-Audit of the consolidated repository: **19 of 21 listed deliverables are present;
-two PDF documents are missing.** Supporting utilities, tests and provenance are
+Audit of the consolidated repository: **20 of 21 listed deliverables are present;
+the main technical report is missing.** Supporting utilities, tests and provenance are
 retained because they are needed to execute, verify or reproduce the deliverables.
 
 | Required deliverable | Status / evidence |
@@ -22,7 +22,7 @@ retained because they are needed to execute, verify or reproduce the deliverable
 | `compression_analysis_report.pdf` | **Missing:** required 3–4 page technical report; excluded by the earlier instruction not to create reports. |
 | `compression_guidelines.md` | Present: regenerated from consolidated measured results. |
 | `performance_benchmarks.xlsx` | Present: consolidated metrics, with corrected Part 2 results. |
-| `interaction_analysis_summary.pdf` | **Missing:** required interaction summary; excluded by the earlier instruction not to create reports. |
+| `interaction_analysis_summary.pdf` | Present: tables of measured combinations and all six orderings. |
 | `pareto_frontiers.png` | Present: accuracy versus size and latency. |
 | `compression_heatmaps.png` | Present: layer-wise compression impact. |
 | `convergence_plots.png` | Present: training convergence comparisons. |
@@ -37,7 +37,7 @@ retained because they are needed to execute, verify or reproduce the deliverable
    25.46 points against the original benchmark baseline. Corrected QAT INT8 TFLite
    reaches 81.06% test accuracy but only 3.92x compression. Packed pruning-plus-INT8
    alternatives preserve accuracy but reach approximately 8.1x compression.
-2. **The two PDFs above remain to be written.** File existence and successful jobs
+2. **The main technical report remains to be written.** File existence and successful jobs
    do not substitute for these documents or establish that all grading criteria
    have been met.
 3. **Repeated-seed experimental evidence is absent.** The fuller assignment

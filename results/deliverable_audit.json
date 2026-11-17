@@ -4,7 +4,6 @@
   "duplicate_model_aliases": 85,
   "target_passing_models": [],
   "missing_documents": [
-    "compression_analysis_report.pdf",
-    "interaction_analysis_summary.pdf"
+    "compression_analysis_report.pdf"
   ]
 }
