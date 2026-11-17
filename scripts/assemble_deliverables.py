@@ -3,6 +3,7 @@
 Run from the repository root before removing the downloaded output directories.
 No training or new benchmark measurements are performed.
 """
+import argparse
 import hashlib
 import json
 import shutil
@@ -37,6 +38,10 @@ def digest(path):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--no-workbook", action="store_true",
+                        help="Export JSON/CSV only; optionally use export_benchmarks.mjs for XLSX.")
+    args = parser.parse_args()
     full = ROOT / "outputs/dtu_30015147"
     fixed = ROOT / "outputs/dtu_part2_fixed"
     assert full.is_dir() and fixed.is_dir(), "Both downloaded DTU runs are required."
@@ -122,7 +127,7 @@ def main():
     from visualization_tools import export_benchmarks, create_compression_visualizations
     from application_scenarios import ApplicationScenarioAnalysis, generate_compression_guidelines
     configure(output_dir=ROOT)
-    export_benchmarks(records, include_workbook=False)
+    export_benchmarks(records, include_workbook=not args.no_workbook)
     create_compression_visualizations(records, experiments)
     for name in ("pruning_sensitivity.png", "temperature_optimization.png", "interaction_pareto_frontiers.png"):
         shutil.copy2(full / name, ROOT / name)

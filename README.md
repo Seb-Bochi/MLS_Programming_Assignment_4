@@ -264,6 +264,12 @@ one-epoch runs are execution checks and must be kept separate from this evidence
 
 ## Validation
 
+Run `python scripts/verify_deliverables.py` to check saved archive integrity,
+finite model/checkpoint tensors, portable model references and workbook values.
+This check reads the packaged results without training or downloading data.
+`results/cleanup_record.json` records the recovery location for removed obsolete
+files. The ignored `.venv/` is a local execution environment, not a submission file.
+
 The last completed offline test run contains 43 passing numerical and behavioral
 checks. It covers data-split isolation, baseline graph construction, exact pruning
 masks, residual-safe channel surgery, custom quantization gradients and serialization,

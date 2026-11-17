@@ -1,0 +1,40 @@
+{
+  "cleanup_date": "2026-11-17",
+  "recovery_directory": "C:/Users/sebbo/AppData/Local/Temp/MLS4_cleanup_20261117_057c3a2f3d7b43f4b3434f140166c66b",
+  "removed_from_repository_recoverably": [
+    "outputs/ (original downloads, superseded summaries, synthetic runs and workbook previews)",
+    ".keras/ (download cache)",
+    ".pytest_cache/",
+    ".pytest_tmp/",
+    "__pycache__/",
+    "tests/__pycache__/",
+    "scripts/__pycache__/",
+    "MLS_Programming_Assignment_4/ (empty nested project)",
+    "MLS_Programming_Assignment_4_vol_2.0/ (contents and Git history backed up; residual metadata remains)",
+    "scripts/verify_outputs.py",
+    "scripts/refresh_smoke_artifacts.py",
+    "scripts/verify_extended.py",
+    "scripts/run_logged.py",
+    "scripts/node_modules (runtime junction only)",
+    "performance_benchmarks.xlsx.inspect.ndjson"
+  ],
+  "residual_cleanup_item": {
+    "path": "MLS_Programming_Assignment_4_vol_2.0/.git/gk/config",
+    "reason": "Windows denied removal/movement even with elevated tool execution. A backup copy exists. No project code or artifacts remain in the nested directory."
+  },
+  "retained_support": [
+    ".venv/ (ignored local execution environment; exclude from submission)",
+    "tests/", "common.py", "main.py", "neural_architecture_search.py",
+    "scripts/assemble_deliverables.py", "scripts/export_benchmarks.mjs", "scripts/verify_deliverables.py",
+    "setup_dtu_hpc.sh", "run_dtu_hpc.sh", "results/ (analysis and provenance)"
+  ],
+  "artifact_cleanup": {
+    "duplicate_keras_exports_replaced_by_aliases": 85,
+    "retained_keras_files_including_baseline": 69,
+    "retained_tflite_files": 15,
+    "retained_packed_models": 20,
+    "retained_weight_checkpoints": 37,
+    "retained_split_archives": 1,
+    "consolidated_benchmark_rows": 76
+  }
+}

@@ -80,7 +80,9 @@ def main():
     assert not missing_references, sorted(set(missing_references))
     workbook = load_workbook(ROOT / "performance_benchmarks.xlsx", read_only=True, data_only=True)
     sheet = workbook["Benchmarks"]
-    rows = list(sheet.iter_rows(min_row=7, values_only=True))
+    # The portable Python exporter uses row 4; the styled JS exporter uses row 6.
+    header_row = next(i for i in range(1, 10) if sheet.cell(i, 1).value == "Model")
+    rows = list(sheet.iter_rows(min_row=header_row + 1, values_only=True))
     assert len(rows) == len(records), (len(rows), len(records))
     fields = ["model_name", "test_accuracy", "model_size_mb", "compression_ratio", "accuracy_loss_percent",
               "single_inference_ms", "single_p95_ms", "batch_inference_ms", "batch_size",
