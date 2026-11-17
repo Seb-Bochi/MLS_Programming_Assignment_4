@@ -67,7 +67,7 @@ if [[ -n "${CUDA_PATHS[2]:-}" ]]; then
     export XLA_FLAGS="${XLA_FLAGS:-} --xla_gpu_cuda_data_dir=${CUDA_PATHS[2]}"
 fi
 
-MODE="${MODE:-all}"                 # all | baseline | quick
+MODE="${MODE:-all}"                 # all | baseline | quick | seeds
 EXTENDED="${EXTENDED:-1}"           # 1 includes every optional experiment
 PARTS="${PARTS:-}"                  # Optional space-separated main.py --parts values
 BASELINE_SOURCE="${BASELINE_SOURCE:-}"  # Optional existing baseline_model.keras
@@ -126,7 +126,7 @@ case "$MODE" in
     all) [[ "$EXTENDED" != 1 ]] || args+=(--extended) ;;
     baseline) args+=(--baseline-only) ;;
     quick) args+=(--quick) ;;
-    *) echo "MODE must be all, baseline, or quick." >&2; exit 1 ;;
+    *) echo "MODE must be all, baseline, quick, or seeds." >&2; exit 1 ;;
 esac
 printf 'Command:'; printf ' %q' python -u main.py "${args[@]}"; printf '\n'
 python -u main.py "${args[@]}"
